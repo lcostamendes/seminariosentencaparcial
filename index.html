@@ -12,7 +12,7 @@
 
 <style>
   /* =========================================
-     PALETA DE CORES E VARIÁVEIS (USP San Fran)
+     PALETA DE CORES E VARIÁVEIS (Identidade USP San Fran)
      ========================================= */
   :root {
     --primary-color: #1a1a1a; 
@@ -49,7 +49,7 @@
     display: flex;
   }
 
-  /* MARCA D'ÁGUA GLOBAL */
+  /* MARCA D'ÁGUA USP */
   .watermark-global {
     position: fixed;
     bottom: 30px;
@@ -61,7 +61,7 @@
     mix-blend-mode: multiply;
   }
 
-  /* Glassmorphism */
+  /* Efeito de Vidro Fosco (Glassmorphism) */
   .glass-panel {
     background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(12px);
@@ -179,7 +179,7 @@
   }
 
   /* =========================================
-     FUNDOS
+     FUNDOS (Dark Red Gradient)
      ========================================= */
   .dark-bg {
     background-color: #1a0508; 
@@ -189,7 +189,7 @@
   }
 
   /* =========================================
-     TELA 1: CAPA
+     TELA 1: CAPA DE IDENTIFICAÇÃO
      ========================================= */
   .intro-logo {
     max-width: 140px;
@@ -228,7 +228,7 @@
   }
 
   /* =========================================
-     TELA 2: INTRODUÇÃO INTERATIVA
+     TELA 2: INTRODUÇÃO INTERATIVA (Lado a Lado)
      ========================================= */
   .intro-split-grid {
     display: grid;
@@ -354,6 +354,7 @@
     }
   }
 
+  /* Sub-cards de Contraposição (Brasil vs Arbitragem Internacional) */
   .perspectives-wrapper {
     display: flex;
     flex-direction: column;
@@ -467,6 +468,7 @@
     margin-top: 10px;
   }
 
+  /* Botão de Referência (abre Pop-up) */
   .ref-tag-btn {
     display: inline-flex;
     align-items: center;
@@ -493,7 +495,7 @@
   }
 
   /* =========================================
-     MODAL DE CITAÇÃO DOUTRINÁRIA E LEGISLAÇÃO
+     POP-UP / MODAL DE CITAÇÃO DOUTRINÁRIA E LEGISLAÇÃO
      ========================================= */
   .doc-modal-overlay {
     display: none;
@@ -635,6 +637,7 @@
     display: block;
   }
 
+  /* Lista de Funções na Coluna Direita */
   .funcoes-list {
     list-style: none;
     padding-left: 0;
@@ -888,6 +891,7 @@
     margin-top: 6px;
   }
 
+  /* Barras Comparativas Horizontais */
   .comp-chart-group {
     width: 100%;
     text-align: left;
@@ -897,6 +901,7 @@
     border-radius: 8px;
     border: 1px solid var(--border-color);
     box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    box-sizing: border-box;
   }
   .comp-group-title {
     font-size: 13px;
@@ -1104,7 +1109,7 @@
   }
 
   /* =========================================
-     ESTILIZAÇÃO DO ROTEIRO
+     ESTILIZAÇÃO DO ROTEIRO (Word Ipsis Litteris)
      ========================================= */
   #roteiroContainer {
     display: none;
@@ -1299,6 +1304,7 @@
     flex: 1;
     border: none;
   }
+
 </style>
 </head>
 <body>
@@ -1322,7 +1328,7 @@
   </div>
 </div>
 
-<!-- TELA 2: INTRODUÇÃO -->
+<!-- TELA 2: INTRODUÇÃO (LADO A LADO INTERATIVA) -->
 <div id="screen-funcoes" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 1120px; padding: 32px 45px;">
     <div style="font-size: 11px; font-weight: 700; color: var(--accent-color); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 4px;">
@@ -1334,7 +1340,7 @@
 
     <div class="intro-split-grid">
       
-      <!-- DEFINIÇÃO DE SENTENÇA ARBITRAL -->
+      <!-- LADO ESQUERDO: DEFINIÇÃO DE SENTENÇA ARBITRAL -->
       <div id="card-definicao" class="interactive-card collapsed" onclick="handleCardClick(event, 'card-definicao')">
         <div class="card-header-bar" onclick="toggleMainCard(event, 'card-definicao')">
           <h3>1. Definição de Sentença Arbitral</h3>
@@ -1350,7 +1356,8 @@
           </div>
 
           <div class="perspectives-wrapper">
-            <!-- PERSPECTIVA BRASIL -->
+            
+            <!-- Sub-bloco 1: Brasil -->
             <div id="sub-brasil" class="perspective-box" onclick="togglePerspective(event, 'sub-brasil')">
               <div class="perspective-header">
                 <span class="perspective-title">Perspectiva: Brasil</span>
@@ -1382,7 +1389,7 @@
               </div>
             </div>
 
-            <!-- PERSPECTIVA INTERNACIONAL -->
+            <!-- Sub-bloco 2: Arbitragem Internacional -->
             <div id="sub-intl" class="perspective-box intl" onclick="togglePerspective(event, 'sub-intl')">
               <div class="perspective-header">
                 <span class="perspective-title">Perspectiva: Arbitragem Internacional</span>
@@ -1392,15 +1399,15 @@
                 <ul class="perspective-list">
                   <li>
                     <span class="num">1)</span>
-                    <strong>Decisão definitiva sobre a disputa</strong> (seja mérito, jurisdição ou questão procedimental que encerre a fase)[cite: 3].
+                    <strong>Decisão definitiva sobre a disputa</strong> (seja mérito, jurisdição ou questão procedimental que encerre a fase).
                   </li>
                   <li>
                     <span class="num">2)</span>
-                    <strong>Decisão definitiva sobre questão é sentença</strong> (prescrição, decadência, lei aplicável)[cite: 3].
+                    <strong>Decisão definitiva sobre questão é sentença</strong> (prescrição, decadência, lei aplicável).
                   </li>
                   <li>
                     <span class="num">3)</span>
-                    <strong>Sentença parcial:</strong> julgamento definitivo de parte da disputa (mérito ou jurisdição)[cite: 3].
+                    <strong>Sentença parcial:</strong> julgamento definitivo de parte da disputa (mérito ou jurisdição).
                   </li>
                 </ul>
                 <div class="ref-buttons-group">
@@ -1413,11 +1420,12 @@
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>
 
-      <!-- FUNÇÕES DA SENTENÇA PARCIAL -->
+      <!-- LADO DIREITO: FUNÇÕES DA SENTENÇA PARCIAL -->
       <div id="card-funcoes" class="interactive-card collapsed" onclick="handleCardClick(event, 'card-funcoes')">
         <div class="card-header-bar" onclick="toggleMainCard(event, 'card-funcoes')">
           <h3>2. Funções da Sentença Parcial</h3>
@@ -1461,7 +1469,7 @@
 </div>
 
 <!-- ========================================================
-     MODAIS (POP-UPS) DE REFERÊNCIAS
+     MODAIS (POP-UPS) DE REFERÊNCIAS DOUTRINÁRIAS E LEGISLAÇÃO
      ======================================================== -->
 
 <!-- MODAL: LEGISLAÇÃO BRASILEIRA (LArb & CPC) -->
@@ -1470,21 +1478,21 @@
     <div class="doc-modal-header">
       <div>
         <h3>Legislação Brasileira</h3>
-        <div class="doc-modal-subtitle">Lei de Arbitragem (Lei nº 9.307/96) & Código de Processo Civil (CPC/15)[cite: 3]</div>
+        <div class="doc-modal-subtitle">Lei de Arbitragem (Lei nº 9.307/96) & Código de Processo Civil (CPC/15)</div>
       </div>
       <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-larb-cpc')">✕ Fechar</button>
     </div>
     <div class="doc-modal-body">
       <div class="doc-quote-block">
         <span class="doc-quote-title">Lei nº 9.307/1996 (Lei de Arbitragem):</span>
-        <p><strong>Art. 31.</strong> A sentença arbitral produz, entre as partes e seus sucessores, os mesmos efeitos da sentença proferida pelos órgãos do Poder Judiciário e, sendo condenatória, constitui título executivo.[cite: 3]</p>
-        <p><strong>Art. 33.</strong> A parte interessada poderá pleitear ao órgão do Poder Judiciário competente a declaração de nulidade da sentença arbitral, nos casos previstos nesta Lei.[cite: 3]</p>
-        <p><strong>§ 1º</strong> A demanda para a declaração de nulidade da sentença arbitral, parcial ou final, seguirá as regras do procedimento comum, previstas na Lei nº 5.869, de 11 de janeiro de 1973 (Código de Processo Civil), e deverá ser proposta no prazo de até 90 (noventa) dias após o recebimento da notificação da respectiva sentença, parcial ou final, ou da decisão do pedido de esclarecimentos.[cite: 3]</p>
+        <p><strong>Art. 31.</strong> A sentença arbitral produz, entre as partes e seus sucessores, os mesmos efeitos da sentença proferida pelos órgãos do Poder Judiciário e, sendo condenatória, constitui título executivo.</p>
+        <p><strong>Art. 33.</strong> A parte interessada poderá pleitear ao órgão do Poder Judiciário competente a declaração de nulidade da sentença arbitral, nos casos previstos nesta Lei.</p>
+        <p><strong>§ 1º</strong> A demanda para a declaração de nulidade da sentença arbitral, parcial ou final, seguirá as regras do procedimento comum, previstas na Lei nº 5.869, de 11 de janeiro de 1973 (Código de Processo Civil), e deverá ser proposta no prazo de até 90 (noventa) dias após o recebimento da notificação da respectiva sentença, parcial ou final, ou da decisão do pedido de esclarecimentos.</p>
       </div>
 
       <div class="doc-quote-block">
         <span class="doc-quote-title">Código de Processo Civil (CPC/2015):</span>
-        <p><strong>Art. 203, § 1º:</strong> “sentença é o pronunciamento por meio do qual o juiz, com fundamento nos arts. 485 e 487, põe fim à fase cognitiva do procedimento comum, bem como extingue a execução”.[cite: 3]</p>
+        <p><strong>Art. 203, § 1º:</strong> “sentença é o pronunciamento por meio do qual o juiz, com fundamento nos arts. 485 e 487, põe fim à fase cognitiva do procedimento comum, bem como extingue a execução”.</p>
       </div>
     </div>
   </div>
@@ -1496,26 +1504,26 @@
     <div class="doc-modal-header">
       <div>
         <h3>Cândido Rangel Dinamarco</h3>
-        <div class="doc-modal-subtitle">Instituições de Direito Processual Civil – Vol. III[cite: 3]</div>
+        <div class="doc-modal-subtitle">Instituições de Direito Processual Civil – Vol. III</div>
       </div>
       <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-dinamarco')">✕ Fechar</button>
     </div>
     <div class="doc-modal-body">
       <div class="doc-quote-block">
         <p>
-          <strong>1. “1.446. cisões no julgamento da causa – o julgamento antecipado parcial do mérito.</strong> Relaciona-se com o tema da divisão da sentença em capítulos o das cisões do julgamento, que, legítima ou ilegitimamente conforme o caso, ocorrem em duas situações diferentes. Conhecem-se <em>(a)</em> cisões referentes a <em>parcelas do objeto do processo</em>, decidindo o juiz sobre uma delas e mandando que o processo siga avante para a instrução e julgamento referentes às demais, e <em>(b)</em> cisões referentes aos <em>fundamentos</em> da demanda inicial ou da defesa do réu, antecipando-se a decisão de alguma questão de mérito suscitada pelas partes, sem proferir naquele momento uma sentença (nem de mérito nem terminativa).[cite: 3]
+          <strong>1. “1.446. cisões no julgamento da causa – o julgamento antecipado parcial do mérito.</strong> Relaciona-se com o tema da divisão da sentença em capítulos o das cisões do julgamento, que, legítima ou ilegitimamente conforme o caso, ocorrem em duas situações diferentes. Conhecem-se <em>(a)</em> cisões referentes a <em>parcelas do objeto do processo</em>, decidindo o juiz sobre uma delas e mandando que o processo siga avante para a instrução e julgamento referentes às demais, e <em>(b)</em> cisões referentes aos <em>fundamentos</em> da demanda inicial ou da defesa do réu, antecipando-se a decisão de alguma questão de mérito suscitada pelas partes, sem proferir naquele momento uma sentença (nem de mérito nem terminativa).
         </p>
         <p>
-          O art. 356 do Código de Processo Civil autoriza aquela primeira espécie de cisão ao institucionalizar o <em>julgamento antecipado do mérito</em>, pelo qual o juiz, no momento do julgamento conforme o estado do processo, aprecia um ou alguns dos pedidos do autor, sem apreciar todos – mandando que o processo siga avante para instrução e julgamento referentes aos não decididos naquele momento. Essa cisão faz com que algum ou alguns capítulos do pedido sejam desde logo objeto de decisão (antecipada) e outros só venham a ser decididos ao fim do procedimento (<em>supra</em>, n. 1.345). E o ato portador do julgamento antecipado parcial do mérito é conceituado como uma <em>decisão interlocutória</em> e não sentença, porque não põe fim à fase cognitiva do processo (art. 203, §§ 1º-2º).[cite: 3]
+          O art. 356 do Código de Processo Civil autoriza aquela primeira espécie de cisão ao institucionalizar o <em>julgamento antecipado do mérito</em>, pelo qual o juiz, no momento do julgamento conforme o estado do processo, aprecia um ou alguns dos pedidos do autor, sem apreciar todos – mandando que o processo siga avante para instrução e julgamento referentes aos não decididos naquele momento. Essa cisão faz com que algum ou alguns capítulos do pedido sejam desde logo objeto de decisão (antecipada) e outros só venham a ser decididos ao fim do procedimento (<em>supra</em>, n. 1.345). E o ato portador do julgamento antecipado parcial do mérito é conceituado como uma <em>decisão interlocutória</em> e não sentença, porque não põe fim à fase cognitiva do processo (art. 203, §§ 1º-2º).
         </p>
         <p>
-          Além disso, é dever do juiz excluir desde logo do objeto do processo eventuais pretensões insuscetíveis de julgamento de mérito (ilegitimidade <em>ad causam</em> de um dos autores ou de um dos réus, coisa julgada relativa a um dos pedidos etc.), ou mesmo, em alguns casos, julgá-las pelo próprio mérito (prescrição, decadência). Em todos esses casos o objeto do processo será cindido e este prosseguirá pelo pedido que restar, excluídos os inadmissíveis.[cite: 3]
+          Além disso, é dever do juiz excluir desde logo do objeto do processo eventuais pretensões insuscetíveis de julgamento de mérito (ilegitimidade <em>ad causam</em> de um dos autores ou de um dos réus, coisa julgada relativa a um dos pedidos etc.), ou mesmo, em alguns casos, julgá-las pelo próprio mérito (prescrição, decadência). Em todos esses casos o objeto do processo será cindido e este prosseguirá pelo pedido que restar, excluídos os inadmissíveis.
         </p>
         <p>
-          É porém absolutamente contrária ao sistema a cisão consistente em apreciar uma ou algumas das <em>questões</em> postas no processo, sem decidir sobre a procedência ou improcedência da demanda, ainda que parcial, ou mesmo pela denegação do julgamento do mérito (sentença terminativa). Todas as questões relacionadas com o mérito devem ser solucionadas no mesmo ato com o qual o juiz decide pela procedência ou improcedência da demanda – quer se trate da sentença de mérito proferida ao fim do procedimento, quer se trate da decisão interlocutória portadora do julgamento parcial do mérito (CPC, art. 356). Quando o Código de Processo Civil diz que a sentença deve conter relatório, motivação e decisório (art. 489) isso significa que no corpo de um ato só, chamado <em>sentença</em>, devem estar não só a solução das questões de mérito (fundamentação) como também o preceito concreto destinado a reger as relações entre as partes, que é o decisório. Tal é o <em>princípio da unidade estrutural da sentença</em>, que só pode ser contrariado quando uma específica norma de direito o autorizar (Liebman).[cite: 3]
+          É porém absolutamente contrária ao sistema a cisão consistente em apreciar uma ou algumas das <em>questões</em> postas no processo, sem decidir sobre a procedência ou improcedência da demanda, ainda que parcial, ou mesmo pela denegação do julgamento do mérito (sentença terminativa). Todas as questões relacionadas com o mérito devem ser solucionadas no mesmo ato com o qual o juiz decide pela procedência ou improcedência da demanda – quer se trate da sentença de mérito proferida ao fim do procedimento, quer se trate da decisão interlocutória portadora do julgamento parcial do mérito (CPC, art. 356). Quando o Código de Processo Civil diz que a sentença deve conter relatório, motivação e decisório (art. 489) isso significa que no corpo de um ato só, chamado <em>sentença</em>, devem estar não só a solução das questões de mérito (fundamentação) como também o preceito concreto destinado a reger as relações entre as partes, que é o decisório. Tal é o <em>princípio da unidade estrutural da sentença</em>, que só pode ser contrariado quando uma específica norma de direito o autorizar (Liebman).
         </p>
         <p>
-          Não é incomum, no entanto, encontrar pronunciamentos sobre a prescrição ou a decadência quando no curso do processo o juiz <em>repele</em> uma dessas causas extintivas de direitos ou ações, não decidindo o mérito sequer parcialmente, saneando o processo e prosseguindo em direção à sentença de mérito. Independentemente da concepção que se tenha sobre os conceitos e a função sistemática da prescrição e da decadência (<em>supra</em>, nn. 497 ss. e 1.116-1.117), o Código as dá como motivo para um <em>julgamento do mérito</em>, ou seja, elas são tomadas como <em>fatos extintivos do direito do autor</em> (art. 487, inc. II). A consequência é que rejeitar a prescrição ou a decadência importa afastar um dos possíveis <em>fundamentos da improcedência da demanda</em>, que devem ser apreciados no mesmo ato de julgamento da causa e não em decisão interlocutória isolada (arts. 487, inc. II, e 489, inc. II). Seria o mesmo que, no saneamento do processo, negar um outro fato extintivo afirmado pelo réu, como o pagamento ou a compensação, prosseguindo-se na instrução com referência aos demais pontos relevantes; ou como negar um dos fatos constitutivos arguidos na petição inicial, como a culpa do réu, prosseguindo-se para a verificação de sua responsabilidade objetiva. Diante do que é disposto no art. 487, inc. II, do Código de Processo Civil, quando no curso do processo o juiz se vir diante da alegação de prescrição ou de decadência, deduzida pelo réu, ele deve tomar uma dessas atitudes: <em>a)</em> ou reputa que uma dessas causas extintivas está presente e profere desde logo uma sentença de mérito (art. 487, inc. II), ou <em>(b)</em> deixa de acolhê-la no momento e difere seu pronunciamento a esse respeito para o momento de sentenciar. Se rejeitar desde logo a alegação, ele estará cindindo indevidamente o julgamento das questões de mérito, sendo nula essa decisão e responsável por desnecessárias dificuldades para os operadores do processo: essa decisão seria recorrível? qual recurso seria adequado? ela seria apta a ficar imunizada pela autoridade da coisa julgada material? comportaria ação rescisória?”[cite: 3]
+          Não é incomum, no entanto, encontrar pronunciamentos sobre a prescrição ou a decadência quando no curso do processo o juiz <em>repele</em> uma dessas causas extintivas de direitos ou ações, não decidindo o mérito sequer parcialmente, saneando o processo e prosseguindo em direção à sentença de mérito. Independentemente da concepção que se tenha sobre os conceitos e a função sistemática da prescrição e da decadência (<em>supra</em>, nn. 497 ss. e 1.116-1.117), o Código as dá como motivo para um <em>julgamento do mérito</em>, ou seja, elas são tomadas como <em>fatos extintivos do direito do autor</em> (art. 487, inc. II). A consequência é que rejeitar a prescrição ou a decadência importa afastar um dos possíveis <em>fundamentos da improcedência da demanda</em>, que devem ser apreciados no mesmo ato de julgamento da causa e não em decisão interlocutória isolada (arts. 487, inc. II, e 489, inc. II). Seria o mesmo que, no saneamento do processo, negar um outro fato extintivo afirmado pelo réu, como o pagamento ou a compensação, prosseguindo-se na instrução com referência aos demais pontos relevantes; ou como negar um dos fatos constitutivos arguidos na petição inicial, como a culpa do réu, prosseguindo-se para a verificação de sua responsabilidade objetiva. Diante do que é disposto no art. 487, inc. II, do Código de Processo Civil, quando no curso do processo o juiz se vir diante da alegação de prescrição ou de decadência, deduzida pelo réu, ele deve tomar uma dessas atitudes: <em>a)</em> ou reputa que uma dessas causas extintivas está presente e profere desde logo uma sentença de mérito (art. 487, inc. II), ou <em>(b)</em> deixa de acolhê-la no momento e difere seu pronunciamento a esse respeito para o momento de sentenciar. Se rejeitar desde logo a alegação, ele estará cindindo indevidamente o julgamento das questões de mérito, sendo nula essa decisão e responsável por desnecessárias dificuldades para os operadores do processo: essa decisão seria recorrível? qual recurso seria adequado? ela seria apta a ficar imunizada pela autoridade da coisa julgada material? comportaria ação rescisória?”
         </p>
       </div>
     </div>
@@ -1528,7 +1536,7 @@
     <div class="doc-modal-header">
       <div>
         <h3>Fouchard, Gaillard, Goldman</h3>
-        <div class="doc-modal-subtitle">International Commercial Arbitration[cite: 3]</div>
+        <div class="doc-modal-subtitle">International Commercial Arbitration</div>
       </div>
       <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-fouchard')">✕ Fechar</button>
     </div>
@@ -1536,7 +1544,7 @@
       <div class="doc-quote-block">
         <span class="doc-quote-title">Concept of Arbitral Award:</span>
         <p>
-          “An arbitral award can be defined as a final decision by the arbitrators on all or part of the dispute submitted to them, whether it concerns the merits of the dispute, jurisdiction, or a procedural issue leading them to end the proceedings”.[cite: 3]
+          “An arbitral award can be defined as a final decision by the arbitrators on all or part of the dispute submitted to them, whether it concerns the merits of the dispute, jurisdiction, or a procedural issue leading them to end the proceedings”.
         </p>
       </div>
     </div>
@@ -1549,7 +1557,7 @@
     <div class="doc-modal-header">
       <div>
         <h3>Gary Born</h3>
-        <div class="doc-modal-subtitle">International Commercial Arbitration[cite: 3]</div>
+        <div class="doc-modal-subtitle">International Commercial Arbitration</div>
       </div>
       <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-born')">✕ Fechar</button>
     </div>
@@ -1557,14 +1565,14 @@
       <div class="doc-quote-block">
         <span class="doc-quote-title">1. Jurisdictional awards:</span>
         <p>
-          “As discussed above, arbitral tribunals not infrequently resolve jurisdictional disputes, rendering either positive or negative decisions. The better view is that a positive jurisdictional decision constitutes an “award,” subject to the annulment, recognition and other provisions of local arbitration legislation. Although there are contrary authorities, the same conclusion should apply to negative jurisdictional awards: a tribunal's determination that it lacks jurisdiction should be subject to annulment, as well as recognition, as an award under both national arbitration legislation and the New York Convention.”[cite: 3]
+          “As discussed above, arbitral tribunals not infrequently resolve jurisdictional disputes, rendering either positive or negative decisions. The better view is that a positive jurisdictional decision constitutes an “award,” subject to the annulment, recognition and other provisions of local arbitration legislation. Although there are contrary authorities, the same conclusion should apply to negative jurisdictional awards: a tribunal's determination that it lacks jurisdiction should be subject to annulment, as well as recognition, as an award under both national arbitration legislation and the New York Convention.<sup>20</sup>”
         </p>
       </div>
 
       <div class="doc-quote-block">
         <span class="doc-quote-title">2. Decisions Concerning Preliminary Substantive Issues:</span>
         <p>
-          “Arbitral decisions that decide only one substantive issue also presumptively constitute “awards," including when the tribunal does not grant specific monetary or injunctive relief. For example, if a tribunal decides what law applies to a contract, decides issues of liability, or otherwise resolves disputed substantive issues, while not making a final disposition of all of the parties’ claims, these rulings should generally be considered awards. Critical to this conclusion, however, is the grant of declaratory relief, rather than merely providing reasoning in support of a conclusion; unless the tribunal makes a declaration (e.g., the respondent breached Article 4, but not Article 5, of the contract), then its reasoning is not an award.”[cite: 3]
+          “Arbitral decisions that decide only one substantive issue also presumptively constitute “awards," including when the tribunal does not grant specific monetary or injunctive relief. For example, if a tribunal decides what law applies to a contract, decides issues of liability, or otherwise resolves disputed substantive issues, while not making a final disposition of all of the parties’ claims, these rulings should generally be considered awards.<sup>21</sup> Critical to this conclusion, however, is the grant of declaratory relief, rather than merely providing reasoning in support of a conclusion; unless the tribunal makes a declaration (e.g., the respondent breached Article 4, but not Article 5, of the contract), then its reasoning is not an award.<sup>22</sup>”
         </p>
       </div>
     </div>
@@ -1621,7 +1629,7 @@
         <ul>
           <li><strong>Busca Livre:</strong></li>
           <li class="level-2">“sentença” e “arbitral” e “parcial” (7.216 resultados)</li>
-          <li class="level-3">“sentença arbitral parcial” (162 resultados)</li>
+          <li class="level-3">“sentença arbitral parcial” (162 resultados)<br><em>*muito ruído por conta da redação da íntegra do acórdão</em></li>
           <li class="level-4">“sentença arbitral” e “parcial” (2.817 resultados)</li>
           <li style="margin-top: 15px;"><strong>Busca em Ementas:</strong></li>
           <li class="level-2">“sentença” e “arbitral” e “parcial” (624 resultados)</li>
@@ -1638,14 +1646,17 @@
   </div>
 </div>
 
-<!-- TELA: EFEITOS ENDOPROCESSUAIS CBMA & CCI -->
+<!-- ========================================================
+     TELA: II. EFEITOS ENDOPROCESSUAIS (VISÃO GERAL CBMA & CCI)
+     ======================================================== -->
 <div id="screen-endo-intro" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 900px; padding: 35px 50px;">
     <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 24px; margin-bottom: 5px;">II. Efeitos Endoprocessuais</h2>
     <div style="font-size: 13px; color: var(--secondary-color); margin-bottom: 22px;">
-      Base empírica: Sistema de Automatização de Calendários Processuais do CBMA.
+      Base empírica: Sistema de Automatização de Calendários Processuais do CBMA (prazos aprovados em diretoria).
     </div>
 
+    <!-- KPIs do Sistema -->
     <div class="endo-kpi-grid">
       <div class="endo-kpi-card">
         <div class="endo-kpi-num">35.478</div>
@@ -1661,22 +1672,25 @@
       </div>
     </div>
 
+    <!-- Mecânica e Fórmula Combinatória -->
     <div class="formula-box">
       <div style="font-weight: bold; font-size: 13px; color: var(--primary-color); margin-bottom: 6px;">
         Mecânica Algorítmica das Escolhas Procedimentais:
       </div>
       <div style="font-size: 12px; color: var(--secondary-color); line-height: 1.6;">
-        • <strong>3 ramos de Preliminares / Jurisdição:</strong> Não; Bifurcada s/ audiência; Bifurcada c/ audiência.<br>
-        • <strong>3 ramos de Cautelares de Urgência:</strong> Não; Prévia s/ audiência; Prévia c/ audiência.<br>
-        • <strong>2 ramos de Exibição de Documentos:</strong> Não (+0d) ou Sim (+100d).<br>
+        • <strong>3 ramos de Preliminares / Jurisdição:</strong> Não; Bifurcada s/ audiência (Aba 02); Bifurcada c/ audiência (Aba 01).<br>
+        • <strong>3 ramos de Cautelares de Urgência:</strong> Não; Prévia s/ audiência (Aba 04); Prévia c/ audiência (Aba 03).<br>
+        • <strong>2 ramos de Exibição de Documentos:</strong> Não (+0d) ou Sim (+100d na Aba 05).<br>
         • <strong>27 matrizes de Instrução e Mérito:</strong> 3 contrapostos × 3 modalidades de testemunhas × 3 modelos de perícia.<br>
-        • <strong>73 ramos de Liquidação de Sentença:</strong> 1 concomitante desde a inicial + 72 autônomas pós-sentença parcial.
+        • <strong>73 ramos de Liquidação de Sentença:</strong> 1 concomitante desde a inicial + 72 autônomas pós-sentença parcial (18 matrizes × 2 exibições × 2 audiências).
       </div>
       <div style="margin-top: 10px;">
         <span class="formula-code">3 × 3 × 2 × 27 × (1 + 72) = 35.478 Cenários Operacionais</span>
+        <span style="display:block; font-size:11px; color:#777; margin-top:4px;">*Cruzando os 486 ramos prévios com as 36 matrizes estruturais de liquidação: <strong>17.496 calendários autônomos únicos</strong>.</span>
       </div>
     </div>
 
+    <!-- Ações e Navegação com Botões CBMA e ICC -->
     <div style="display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap;">
       <button class="btn-avancar btn-outline" style="margin-top:0;" onclick="mudarTela('screen-roadmap')">Voltar ao Roadmap</button>
       <a href="https://calendarios.cbma.com.br/" target="_blank" class="btn-live-cbma">Navegar no Sistema CBMA ↗</a>
@@ -1686,14 +1700,17 @@
   </div>
 </div>
 
-<!-- TELA: EFEITOS ENDOPROCESSUAIS COMPARATIVO -->
+<!-- ========================================================
+     TELA: II. EFEITOS ENDOPROCESSUAIS (ANÁLISE COMPARATIVA COM 5 CATEGORIAS)
+     ======================================================== -->
 <div id="screen-endo-comparativo" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 950px; padding: 25px 40px;">
     <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 22px; margin-bottom: 2px;">Impacto Temporal: Decisões e Sentenças Parciais</h2>
     <div style="font-size: 12.5px; color: var(--secondary-color); margin-bottom: 16px;">
-      Impacto em dias corridos comparado ao <strong>Procedimento Base de Mérito (250 dias)</strong>.
+      Impacto em dias corridos comparado ao <strong>Procedimento Base de Mérito (Aba 06 – 250 dias)</strong>.
     </div>
 
+    <!-- CATEGORIA 1: PONTO DE PARTIDA -->
     <div class="comp-chart-group">
       <div class="comp-group-title">
         <span>1. Procedimento Padrão de Controle</span>
@@ -1701,7 +1718,7 @@
       </div>
       <div class="comp-row">
         <div class="comp-row-header">
-          <span>Procedimento Base de Mérito (Sem incidentes)</span>
+          <span>Procedimento Base de Mérito (Aba 06 - Sem incidentes e sem perícia/testemunhas)</span>
           <span style="color:var(--primary-color);">250 dias (100%)</span>
         </div>
         <div class="comp-track">
@@ -1710,6 +1727,150 @@
       </div>
     </div>
 
+    <!-- CATEGORIA 2: BIFURCAÇÃO CLÁSSICA / AD HOC DE MÉRITO -->
+    <div class="comp-chart-group" style="border-left: 4px solid #b25d00;">
+      <div class="comp-group-title">
+        <span>2. Bifurcação Clássica (Sentença Parcial Ad Hoc de Mérito)</span>
+        <span style="font-size:11px; font-weight:bold; color:#b25d00;">Prática Forense sem Calendarização</span>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Ciclo Repetido de Encerramento e Sentença (Aleg. Finais [45d] + Despesas [10d] + Sentença [60d] + Esclarecimentos [15d+15d+30d])</span>
+          <span style="color:#b25d00; font-weight:bold;">+175 dias (+70%) | Total: 425 dias</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 26.5%; background: #b25d00;">+175d</div>
+        </div>
+      </div>
+      <div style="font-size: 11px; color: #666; margin-top: 5px; line-height: 1.4;">
+        * Ocorre quando o tribunal decide cindir uma questão de mérito de forma não planejada: impõe-se a repetição integral da fase deliberativa, atrasando o processo em quase 6 meses antes de qualquer instrução remanescente.
+      </div>
+    </div>
+
+    <!-- CATEGORIA 3: SENTENÇAS PARCIAIS DE JURISDIÇÃO E PREJUDICIAIS -->
+    <div class="comp-chart-group">
+      <div class="comp-group-title">
+        <span>3. Sentença Parcial de Jurisdição e Questões Prejudiciais</span>
+        <span style="font-size:11px; font-weight:normal; color:#8b1c31;">Fases Preliminares Autônomas</span>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Sentença Parcial de Jurisdição / Prejudiciais (s/ audiência - Aba 02)</span>
+          <span style="color:var(--accent-color);">+85 dias (+34%) | Total: 335d</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 12.8%; background: var(--accent-color);">+85d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Sentença Parcial de Jurisdição / Prejudiciais (c/ audiência prévia - Aba 01)</span>
+          <span style="color:var(--accent-color);">+135 dias (+54%) | Total: 385d</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 20.4%; background: var(--accent-color);">+135d</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIA 4: SENTENÇAS PARCIAIS DE MÉRITO (AN DEBEATUR) E LIQUIDAÇÃO AUTÔNOMA -->
+    <div class="comp-chart-group" style="border-left: 4px solid var(--accent-color);">
+      <div class="comp-group-title">
+        <span>4. Sentença Parcial de Mérito (An Debeatur) + Liquidação Autônoma</span>
+        <span style="font-size:11px; font-weight:bold; color:var(--accent-color);">A Decisão Mais Sensível à Eficiência</span>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Liquidação Autônoma MÍNIMA (Aba 34 s/ audiência - Pura postulação documental)</span>
+          <span style="color:var(--accent-color);">+220 dias (+88%) | Total: 470d (Quase duplica a base)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 33.3%; background: #a8233c;">+220d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Liquidação Autônoma BASE (Aba 34 c/ audiência de apresentação)</span>
+          <span style="color:var(--accent-color);">+250 dias (+100%) | Total: 500d (Exatamente duplica)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 37.8%; background: #8b1c31;">+250d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Liquidação com Perito do Tribunal (Aba 37/39 - Honorários, laudo e audiência)</span>
+          <span style="color:var(--accent-color);">+510 dias (+204%) | Total: 760d (Triplica a base)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 77.3%; background: #6a1525;">+510d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Liquidação Autônoma MÁXIMA (Aba 42/45 c/ Exibição de Docs e Audiência)</span>
+          <span style="color:var(--accent-color); font-weight:bold;">+660 dias (+264%) | Total: 910d (Quase quadruplica)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 100%; background: #420a14;">+660 dias adicionais</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIA 5: INSTRUÇÃO PROBATÓRIA DE MÉRITO (REFERENCIAL) -->
+    <div class="comp-chart-group">
+      <div class="comp-group-title">
+        <span>5. Instrução Probatória e Dinâmica do Mérito (Referencial de Comparação)</span>
+        <span style="font-size:11px; font-weight:normal; color:#555;">Prazos dentro da fase cognitiva</span>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Exibição Incidental de Documentos (Aba 05 - Redfern Schedule / 5 atos)</span>
+          <span style="color:#555;">+100 dias (+40%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 15.1%; background: #78909c;">+100d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Prova Testemunhal Oral CPC (Aba 14 - Rol e inquirição direta em audiência)</span>
+          <span style="color:#555;">+160 dias (+64%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 24.2%; background: #5c6bc0;">+160d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Perícia por Peritos das Partes (Aba 09 - Modelo IBA Rules com laudos iniciais)</span>
+          <span style="color:#2e7d32; font-weight:bold;">+190 dias (+76%) [Economiza 140 dias vs Tribunal]</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 28.8%; background: #2e7d32;">+190d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Prova Testemunhal com Depoimentos Escritos IBA (Aba 11 - Witness Statements)</span>
+          <span style="color:#555;">+200 dias (+80%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 30.3%; background: #3f51b5;">+200d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Perícia por Perito do Tribunal (Aba 10 - Modelo CPC com 22 atos processuais)</span>
+          <span style="color:#c62828; font-weight:bold;">+330 dias (+132%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 50.0%; background: #c62828;">+330d</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegação Inferior com Botões CBMA e ICC -->
     <div style="display: flex; gap: 12px; margin-top: 15px; justify-content: center; flex-wrap: wrap;">
       <button class="btn-avancar btn-outline" style="margin-top:0;" onclick="mudarTela('screen-endo-intro')">Voltar à Visão Geral CBMA</button>
       <a href="https://calendarios.cbma.com.br/" target="_blank" class="btn-live-cbma">Sistema CBMA ↗</a>
@@ -1753,25 +1914,25 @@
           </select>
         </div>
         <div class="filter-group">
-          <label>Finalidade da Sentença</label>
+          <label>Finalidade da Sentença (Col. Y)</label>
           <select id="filterFinalidade">
               <option value="">Qualquer Finalidade</option>
           </select>
         </div>
         <div class="filter-group">
-          <label>Grau de Importância</label>
+          <label>Grau de Importância (Col. X)</label>
           <select id="filterGrau">
               <option value="">Qualquer Grau</option>
           </select>
         </div>
         <div class="filter-group">
-          <label>Cumprimento de Sentença</label>
+          <label>Cumprimento de Sentença (Col. L)</label>
           <select id="filterCumprimento">
               <option value="">Todos</option>
           </select>
         </div>
         <div class="filter-group">
-          <label>Sentença Anulada?</label>
+          <label>Sentença Anulada? (Col. T)</label>
           <select id="filterAnulada">
               <option value="">Todas</option>
           </select>
@@ -1783,12 +1944,13 @@
   </div>
 
   <div id="right-panel">
+    <!-- ESTADO INICIAL -->
     <div id="emptyState" class="empty-state">
-      <span>Selecione um acórdão na lista ao lado para visualizar a análise completa.</span>
+      <span>Selecione um acórdão na lista ao lado (Linha do Tempo) para visualizar a análise completa.</span>
       <span style="display:block; margin-top:20px; font-size:0.9rem; opacity:0.8;">Ou utilize os botões "Roteiro" e "Quantitativos" no menu superior.</span>
     </div>
 
-    <!-- TELA DE ROTEIRO -->
+    <!-- TELA DE ROTEIRO (Word Ipsis Litteris) -->
     <div id="roteiroContainer">
       <h2 class="roteiro-title">Roteiro</h2>
       <ul class="roteiro-list-lvl0">
@@ -1797,6 +1959,40 @@
         </li>
         <li class="roteiro-item-lvl0">
           <div class="roteiro-heading-lvl0">Definição de sentença arbitral</div>
+          <ul class="roteiro-list-lvl1">
+            <li class="roteiro-item-lvl1">
+              <strong>LArb:</strong>
+              <ul class="roteiro-list-lvl2">
+                <li class="roteiro-item-lvl2">
+                  Art. 31. A sentença arbitral produz, entre as partes e seus sucessores, os mesmos efeitos da sentença proferida pelos órgãos do Poder Judiciário e, sendo condenatória, constitui título executivo.
+                </li>
+                <li class="roteiro-item-lvl2">
+                  Art. 33. A parte interessada poderá pleitear ao órgão do Poder Judiciário competente a declaração de nulidade da sentença arbitral, nos casos previstos nesta Lei.
+                  <span class="roteiro-subparagraph">
+                    § 1o A demanda para a declaração de nulidade da sentença arbitral, parcial ou final, seguirá as regras do procedimento comum, previstas na Lei no 5.869, de 11 de janeiro de 1973 (Código de Processo Civil), e deverá ser proposta no prazo de até 90 (noventa) dias após o recebimento da notificação da respectiva sentença, parcial ou final, ou da decisão do pedido de esclarecimentos
+                  </span>
+                </li>
+                <li class="roteiro-item-lvl2" style="background: rgba(139, 28, 49, 0.08); font-weight: 600; color: var(--primary-color);">
+                  Ausência de definição na lei de sentença ou de sentença parcial
+                </li>
+              </ul>
+            </li>
+            <li class="roteiro-item-lvl1">
+              CPC art. 203, § 1º: “sentença é o pronunciamento por meio do qual o juiz, com fundamento nos arts. 485 e 487, põe fim à fase cognitiva do procedimento comum, bem como extingue a execução”.
+            </li>
+            <li class="roteiro-item-lvl1" style="font-weight: 600; color: var(--accent-color);">
+              A decisão que julga uma preliminar ou uma prejudicial e segue para o julgamento do mérito seria uma sentença parcial?
+            </li>
+          </ul>
+        </li>
+        <li class="roteiro-item-lvl0">
+          <div class="roteiro-heading-lvl0">Anulatória de decisão que organiza o procedimento?</div>
+        </li>
+        <li class="roteiro-item-lvl0">
+          <div class="roteiro-heading-lvl0">Cumprimento de sentença arbitral parcial</div>
+        </li>
+        <li class="roteiro-item-lvl0">
+          <div class="roteiro-heading-lvl0">Complementação (art. 33, § 4º) e sentença parcial</div>
         </li>
       </ul>
     </div>
@@ -1804,7 +2000,7 @@
     <!-- TELA DE QUANTITATIVOS -->
     <div id="quantitativosContainer" style="display:none; padding: 35px 40px; overflow-y: auto; height: 100%; background: white;">
       <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 26px; margin-top: 0; margin-bottom: 8px;">Análise Quantitativa</h2>
-      <div style="font-size: 13.5px; color: var(--secondary-color); margin-bottom: 25px;">Distribuição estatística dinâmica dos casos filtrados.</div>
+      <div style="font-size: 13.5px; color: var(--secondary-color); margin-bottom: 25px;">Distribuição estatística dinâmica dos casos filtrados na base lateral.</div>
       
       <div class="methodology-grid" style="grid-template-columns: 1fr 1fr; gap: 20px; border:none; background:transparent; margin-bottom: 20px;">
         <div class="methodology-col">
@@ -1812,25 +2008,25 @@
           <div id="chart-tribunais" style="margin-top:15px; display:flex; flex-direction:column; gap:12px;"></div>
         </div>
         <div class="methodology-col">
-          <h3 style="text-align: center;">Cumprimento de Sentença</h3>
+          <h3 style="text-align: center;">Cumprimento de Sentença (Col. L)</h3>
           <div id="chart-cumprimento" style="margin-top:15px; display:flex; flex-direction:column; gap:12px;"></div>
         </div>
         <div class="methodology-col">
-          <h3 style="text-align: center;">Sentenças Arbitrais Anuladas</h3>
+          <h3 style="text-align: center;">Sentenças Arbitrais Anuladas (Col. T)</h3>
           <div id="chart-anuladas" style="margin-top:15px; display:flex; flex-direction:column; gap:12px;"></div>
         </div>
         <div class="methodology-col">
-          <h3 style="text-align: center;">Tratou da Decadência?</h3>
+          <h3 style="text-align: center;">Tratou da Decadência? (Col. O)</h3>
           <div id="chart-decadencia" style="margin-top:15px; display:flex; flex-direction:column; gap:12px;"></div>
         </div>
         <div class="methodology-col" style="grid-column: span 2;">
-          <h3 style="text-align: center;">Funções da Sentença Parcial</h3>
+          <h3 style="text-align: center;">Funções da Sentença Parcial (Coluna Y)</h3>
           <div id="chart-funcoes" style="margin-top:15px; display:grid; grid-template-columns: 1fr 1fr; gap:12px 25px;"></div>
         </div>
       </div>
     </div>
 
-    <!-- VISUALIZAÇÃO DE DETALHES DOS CASOS -->
+    <!-- VISUALIZAÇÃO DE DETALHES COMPLETOS -->
     <div id="detailsContainer">
       <div class="detail-header">
           <h2 id="detailNumero">Número do Caso</h2>
