@@ -12,7 +12,7 @@
 
 <style>
   /* =========================================
-     PALETA DE CORES E VARIÁVEIS (Identidade USP San Fran)
+     PALETA DE CORES E VARIÁVEIS (USP San Fran)
      ========================================= */
   :root {
     --primary-color: #1a1a1a; 
@@ -61,7 +61,7 @@
     mix-blend-mode: multiply;
   }
 
-  /* Efeito de Vidro Fosco (Glassmorphism) */
+  /* Glassmorphism */
   .glass-panel {
     background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(12px);
@@ -460,6 +460,13 @@
     font-weight: 600;
   }
 
+  .ref-buttons-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
   .ref-tag-btn {
     display: inline-flex;
     align-items: center;
@@ -473,7 +480,6 @@
     border: 1px solid rgba(139, 28, 49, 0.35);
     padding: 5px 12px;
     border-radius: 5px;
-    margin-top: 6px;
     cursor: pointer;
     transition: all 0.25s ease;
     box-shadow: 0 2px 5px rgba(139, 28, 49, 0.06);
@@ -487,7 +493,7 @@
   }
 
   /* =========================================
-     MODAL DE CITAÇÃO DOUTRINÁRIA
+     MODAL DE CITAÇÃO DOUTRINÁRIA E LEGISLAÇÃO
      ========================================= */
   .doc-modal-overlay {
     display: none;
@@ -1344,6 +1350,7 @@
           </div>
 
           <div class="perspectives-wrapper">
+            <!-- PERSPECTIVA BRASIL -->
             <div id="sub-brasil" class="perspective-box" onclick="togglePerspective(event, 'sub-brasil')">
               <div class="perspective-header">
                 <span class="perspective-title">Perspectiva: Brasil</span>
@@ -1364,12 +1371,18 @@
                     <strong>Parcial de mérito:</strong> quando um pedido é independente de outro.
                   </li>
                 </ul>
-                <button type="button" class="ref-tag-btn" onclick="openDocModal(event, 'modal-dinamarco')">
-                  📖 Ref. Dinamarco, Instituições. Vol. III ↗
-                </button>
+                <div class="ref-buttons-group">
+                  <button type="button" class="ref-tag-btn" onclick="openDocModal(event, 'modal-larb-cpc')">
+                    📜 Legislação (LArb & CPC) ↗
+                  </button>
+                  <button type="button" class="ref-tag-btn" onclick="openDocModal(event, 'modal-dinamarco')">
+                    📖 Ref. Dinamarco, Instituições. Vol. III ↗
+                  </button>
+                </div>
               </div>
             </div>
 
+            <!-- PERSPECTIVA INTERNACIONAL -->
             <div id="sub-intl" class="perspective-box intl" onclick="togglePerspective(event, 'sub-intl')">
               <div class="perspective-header">
                 <span class="perspective-title">Perspectiva: Arbitragem Internacional</span>
@@ -1379,20 +1392,25 @@
                 <ul class="perspective-list">
                   <li>
                     <span class="num">1)</span>
-                    <strong>Decisão definitiva sobre a disputa</strong> (seja mérito ou jurisdição).
+                    <strong>Decisão definitiva sobre a disputa</strong> (seja mérito, jurisdição ou questão procedimental que encerre a fase)[cite: 3].
                   </li>
                   <li>
                     <span class="num">2)</span>
-                    <strong>Decisão definitiva sobre questão é sentença</strong> (prescrição, decadência, lei aplicável).
+                    <strong>Decisão definitiva sobre questão é sentença</strong> (prescrição, decadência, lei aplicável)[cite: 3].
                   </li>
                   <li>
                     <span class="num">3)</span>
-                    <strong>Sentença parcial:</strong> julgamento definitivo de parte da disputa (mérito ou jurisdição).
+                    <strong>Sentença parcial:</strong> julgamento definitivo de parte da disputa (mérito ou jurisdição)[cite: 3].
                   </li>
                 </ul>
-                <button type="button" class="ref-tag-btn" onclick="openDocModal(event, 'modal-born')">
-                  📖 Ref. Gary Born e Fouchard, Gaillard, Goldman ↗
-                </button>
+                <div class="ref-buttons-group">
+                  <button type="button" class="ref-tag-btn" onclick="openDocModal(event, 'modal-fouchard')">
+                    📖 Ref. Fouchard, Gaillard, Goldman ↗
+                  </button>
+                  <button type="button" class="ref-tag-btn" onclick="openDocModal(event, 'modal-born')">
+                    📖 Ref. Gary Born ↗
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -1442,33 +1460,96 @@
   </div>
 </div>
 
-<!-- MODAL CÂNDIDO RANGEL DINAMARCO -->
+<!-- ========================================================
+     MODAIS (POP-UPS) DE REFERÊNCIAS
+     ======================================================== -->
+
+<!-- MODAL: LEGISLAÇÃO BRASILEIRA (LArb & CPC) -->
+<div id="modal-larb-cpc" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-larb-cpc')">
+  <div class="doc-modal-card" onclick="event.stopPropagation()">
+    <div class="doc-modal-header">
+      <div>
+        <h3>Legislação Brasileira</h3>
+        <div class="doc-modal-subtitle">Lei de Arbitragem (Lei nº 9.307/96) & Código de Processo Civil (CPC/15)[cite: 3]</div>
+      </div>
+      <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-larb-cpc')">✕ Fechar</button>
+    </div>
+    <div class="doc-modal-body">
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">Lei nº 9.307/1996 (Lei de Arbitragem):</span>
+        <p><strong>Art. 31.</strong> A sentença arbitral produz, entre as partes e seus sucessores, os mesmos efeitos da sentença proferida pelos órgãos do Poder Judiciário e, sendo condenatória, constitui título executivo.[cite: 3]</p>
+        <p><strong>Art. 33.</strong> A parte interessada poderá pleitear ao órgão do Poder Judiciário competente a declaração de nulidade da sentença arbitral, nos casos previstos nesta Lei.[cite: 3]</p>
+        <p><strong>§ 1º</strong> A demanda para a declaração de nulidade da sentença arbitral, parcial ou final, seguirá as regras do procedimento comum, previstas na Lei nº 5.869, de 11 de janeiro de 1973 (Código de Processo Civil), e deverá ser proposta no prazo de até 90 (noventa) dias após o recebimento da notificação da respectiva sentença, parcial ou final, ou da decisão do pedido de esclarecimentos.[cite: 3]</p>
+      </div>
+
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">Código de Processo Civil (CPC/2015):</span>
+        <p><strong>Art. 203, § 1º:</strong> “sentença é o pronunciamento por meio do qual o juiz, com fundamento nos arts. 485 e 487, põe fim à fase cognitiva do procedimento comum, bem como extingue a execução”.[cite: 3]</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: CÂNDIDO RANGEL DINAMARCO -->
 <div id="modal-dinamarco" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-dinamarco')">
   <div class="doc-modal-card" onclick="event.stopPropagation()">
     <div class="doc-modal-header">
       <div>
         <h3>Cândido Rangel Dinamarco</h3>
-        <div class="doc-modal-subtitle">Instituições de Direito Processual Civil – Vol. III</div>
+        <div class="doc-modal-subtitle">Instituições de Direito Processual Civil – Vol. III[cite: 3]</div>
       </div>
       <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-dinamarco')">✕ Fechar</button>
     </div>
     <div class="doc-modal-body">
       <div class="doc-quote-block">
         <p>
-          <strong>1. “1.446. cisões no julgamento da causa – o julgamento antecipado parcial do mérito.</strong> Relaciona-se com o tema da divisão da sentença em capítulos o das cisões do julgamento, que, legítima ou ilegitimamente conforme o caso, ocorrem em duas situações diferentes...
+          <strong>1. “1.446. cisões no julgamento da causa – o julgamento antecipado parcial do mérito.</strong> Relaciona-se com o tema da divisão da sentença em capítulos o das cisões do julgamento, que, legítima ou ilegitimamente conforme o caso, ocorrem em duas situações diferentes. Conhecem-se <em>(a)</em> cisões referentes a <em>parcelas do objeto do processo</em>, decidindo o juiz sobre uma delas e mandando que o processo siga avante para a instrução e julgamento referentes às demais, e <em>(b)</em> cisões referentes aos <em>fundamentos</em> da demanda inicial ou da defesa do réu, antecipando-se a decisão de alguma questão de mérito suscitada pelas partes, sem proferir naquele momento uma sentença (nem de mérito nem terminativa).[cite: 3]
+        </p>
+        <p>
+          O art. 356 do Código de Processo Civil autoriza aquela primeira espécie de cisão ao institucionalizar o <em>julgamento antecipado do mérito</em>, pelo qual o juiz, no momento do julgamento conforme o estado do processo, aprecia um ou alguns dos pedidos do autor, sem apreciar todos – mandando que o processo siga avante para instrução e julgamento referentes aos não decididos naquele momento. Essa cisão faz com que algum ou alguns capítulos do pedido sejam desde logo objeto de decisão (antecipada) e outros só venham a ser decididos ao fim do procedimento (<em>supra</em>, n. 1.345). E o ato portador do julgamento antecipado parcial do mérito é conceituado como uma <em>decisão interlocutória</em> e não sentença, porque não põe fim à fase cognitiva do processo (art. 203, §§ 1º-2º).[cite: 3]
+        </p>
+        <p>
+          Além disso, é dever do juiz excluir desde logo do objeto do processo eventuais pretensões insuscetíveis de julgamento de mérito (ilegitimidade <em>ad causam</em> de um dos autores ou de um dos réus, coisa julgada relativa a um dos pedidos etc.), ou mesmo, em alguns casos, julgá-las pelo próprio mérito (prescrição, decadência). Em todos esses casos o objeto do processo será cindido e este prosseguirá pelo pedido que restar, excluídos os inadmissíveis.[cite: 3]
+        </p>
+        <p>
+          É porém absolutamente contrária ao sistema a cisão consistente em apreciar uma ou algumas das <em>questões</em> postas no processo, sem decidir sobre a procedência ou improcedência da demanda, ainda que parcial, ou mesmo pela denegação do julgamento do mérito (sentença terminativa). Todas as questões relacionadas com o mérito devem ser solucionadas no mesmo ato com o qual o juiz decide pela procedência ou improcedência da demanda – quer se trate da sentença de mérito proferida ao fim do procedimento, quer se trate da decisão interlocutória portadora do julgamento parcial do mérito (CPC, art. 356). Quando o Código de Processo Civil diz que a sentença deve conter relatório, motivação e decisório (art. 489) isso significa que no corpo de um ato só, chamado <em>sentença</em>, devem estar não só a solução das questões de mérito (fundamentação) como também o preceito concreto destinado a reger as relações entre as partes, que é o decisório. Tal é o <em>princípio da unidade estrutural da sentença</em>, que só pode ser contrariado quando uma específica norma de direito o autorizar (Liebman).[cite: 3]
+        </p>
+        <p>
+          Não é incomum, no entanto, encontrar pronunciamentos sobre a prescrição ou a decadência quando no curso do processo o juiz <em>repele</em> uma dessas causas extintivas de direitos ou ações, não decidindo o mérito sequer parcialmente, saneando o processo e prosseguindo em direção à sentença de mérito. Independentemente da concepção que se tenha sobre os conceitos e a função sistemática da prescrição e da decadência (<em>supra</em>, nn. 497 ss. e 1.116-1.117), o Código as dá como motivo para um <em>julgamento do mérito</em>, ou seja, elas são tomadas como <em>fatos extintivos do direito do autor</em> (art. 487, inc. II). A consequência é que rejeitar a prescrição ou a decadência importa afastar um dos possíveis <em>fundamentos da improcedência da demanda</em>, que devem ser apreciados no mesmo ato de julgamento da causa e não em decisão interlocutória isolada (arts. 487, inc. II, e 489, inc. II). Seria o mesmo que, no saneamento do processo, negar um outro fato extintivo afirmado pelo réu, como o pagamento ou a compensação, prosseguindo-se na instrução com referência aos demais pontos relevantes; ou como negar um dos fatos constitutivos arguidos na petição inicial, como a culpa do réu, prosseguindo-se para a verificação de sua responsabilidade objetiva. Diante do que é disposto no art. 487, inc. II, do Código de Processo Civil, quando no curso do processo o juiz se vir diante da alegação de prescrição ou de decadência, deduzida pelo réu, ele deve tomar uma dessas atitudes: <em>a)</em> ou reputa que uma dessas causas extintivas está presente e profere desde logo uma sentença de mérito (art. 487, inc. II), ou <em>(b)</em> deixa de acolhê-la no momento e difere seu pronunciamento a esse respeito para o momento de sentenciar. Se rejeitar desde logo a alegação, ele estará cindindo indevidamente o julgamento das questões de mérito, sendo nula essa decisão e responsável por desnecessárias dificuldades para os operadores do processo: essa decisão seria recorrível? qual recurso seria adequado? ela seria apta a ficar imunizada pela autoridade da coisa julgada material? comportaria ação rescisória?”[cite: 3]
         </p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- MODAL GARY BORN -->
+<!-- MODAL: FOUCHARD, GAILLARD, GOLDMAN -->
+<div id="modal-fouchard" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-fouchard')">
+  <div class="doc-modal-card" onclick="event.stopPropagation()">
+    <div class="doc-modal-header">
+      <div>
+        <h3>Fouchard, Gaillard, Goldman</h3>
+        <div class="doc-modal-subtitle">International Commercial Arbitration[cite: 3]</div>
+      </div>
+      <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-fouchard')">✕ Fechar</button>
+    </div>
+    <div class="doc-modal-body">
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">Concept of Arbitral Award:</span>
+        <p>
+          “An arbitral award can be defined as a final decision by the arbitrators on all or part of the dispute submitted to them, whether it concerns the merits of the dispute, jurisdiction, or a procedural issue leading them to end the proceedings”.[cite: 3]
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: GARY BORN -->
 <div id="modal-born" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-born')">
   <div class="doc-modal-card" onclick="event.stopPropagation()">
     <div class="doc-modal-header">
       <div>
-        <h3>Gary Born / Fouchard, Gaillard, Goldman</h3>
-        <div class="doc-modal-subtitle">Concept of Arbitral Award in International Arbitration</div>
+        <h3>Gary Born</h3>
+        <div class="doc-modal-subtitle">International Commercial Arbitration[cite: 3]</div>
       </div>
       <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-born')">✕ Fechar</button>
     </div>
@@ -1476,7 +1557,14 @@
       <div class="doc-quote-block">
         <span class="doc-quote-title">1. Jurisdictional awards:</span>
         <p>
-          “As discussed above, arbitral tribunals not infrequently resolve jurisdictional disputes, rendering either positive or negative decisions...”
+          “As discussed above, arbitral tribunals not infrequently resolve jurisdictional disputes, rendering either positive or negative decisions. The better view is that a positive jurisdictional decision constitutes an “award,” subject to the annulment, recognition and other provisions of local arbitration legislation. Although there are contrary authorities, the same conclusion should apply to negative jurisdictional awards: a tribunal's determination that it lacks jurisdiction should be subject to annulment, as well as recognition, as an award under both national arbitration legislation and the New York Convention.”[cite: 3]
+        </p>
+      </div>
+
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">2. Decisions Concerning Preliminary Substantive Issues:</span>
+        <p>
+          “Arbitral decisions that decide only one substantive issue also presumptively constitute “awards," including when the tribunal does not grant specific monetary or injunctive relief. For example, if a tribunal decides what law applies to a contract, decides issues of liability, or otherwise resolves disputed substantive issues, while not making a final disposition of all of the parties’ claims, these rulings should generally be considered awards. Critical to this conclusion, however, is the grant of declaratory relief, rather than merely providing reasoning in support of a conclusion; unless the tribunal makes a declaration (e.g., the respondent breached Article 4, but not Article 5, of the contract), then its reasoning is not an award.”[cite: 3]
         </p>
       </div>
     </div>
@@ -1797,20 +1885,17 @@
   let casesData = [];
   let currentActiveItem = null;
 
-  // Carrega dinamicamente a base de dados em JSON
   async function carregarCasos() {
     try {
       const response = await fetch('casos.json');
       casesData = await response.json();
       
-      // Inicializa os seletores de filtros
       populateSelect('filterTribunal', 'tribunal');
       populateSelect('filterFinalidade', 'finalidade');
       populateSelectGrau('filterGrau', 'grau_importancia');
       populateSelect('filterCumprimento', 'cump_sentenca');
       populateSelect('filterAnulada', 'sentenca_anulada');
 
-      // Renderiza a lista inicial
       processCases();
     } catch (error) {
       console.error('Erro ao carregar os casos do arquivo JSON:', error);
@@ -2212,7 +2297,6 @@
       renderQuantidades(filtered); 
   }
 
-  // Event Listeners
   searchInput.addEventListener('input', processCases);
   filterTribunal.addEventListener('change', processCases);
   filterFinalidade.addEventListener('change', processCases);
@@ -2221,7 +2305,6 @@
   filterAnulada.addEventListener('change', processCases);
   sortCases.addEventListener('change', processCases);
 
-  // Inicializa o carregamento dos dados via fetch ao abrir a página
   document.addEventListener('DOMContentLoaded', carregarCasos);
 </script>
 </body>
