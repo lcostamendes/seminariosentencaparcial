@@ -1,0 +1,128 @@
+{
+  "titulo": "Roteiro",
+  "secoes": [
+    {
+      "titulo": "Quantitativos",
+      "subsecoes": []
+    },
+    {
+      "titulo": "Definição de sentença arbitral",
+      "subsecoes": [
+        {
+          "subtitulo": "Brasil",
+          "blocos": [
+            {
+              "autor": "LArb (Lei nº 9.307/1996)",
+              "tipo": "legislacao",
+              "textos": [
+                "Art. 31. A sentença arbitral produz, entre as partes e seus sucessores, os mesmos efeitos da sentença proferida pelos órgãos do Poder Judiciário e, sendo condenatória, constitui título executivo.",
+                "Art. 33. A parte interessada poderá pleitear ao órgão do Poder Judiciário competente a declaração de nulidade da sentença arbitral, nos casos previstos nesta Lei.\n§ 1º A demanda para a declaração de nulidade da sentença arbitral, parcial ou final, seguirá as regras do procedimento comum, previstas na Lei nº 5.869, de 11 de janeiro de 1973 (Código de Processo Civil), e deverá ser proposta no prazo de até 90 (noventa) dias após o recebimento da notificação da respectiva sentença, parcial ou final, ou da decisão do pedido de esclarecimentos"
+              ],
+              "destaque": "Ausência de definição na lei de sentença ou de sentença parcial"
+            },
+            {
+              "autor": "Carmona",
+              "referencia": "Arbitragem e Processo, pg. 362",
+              "tipo": "doutrina",
+              "textos": [
+                "“O exemplo que figuro [homologação da sentença parcial positiva sobre a validade da cláusula arbitral] revela, portanto, porque não me parece adequado, mesmo à luz da Convenção de Nova Iorque, definir como sentença arbitral \"somente aquela que aprecia e decide quanto ao fundo da causa ou que coloca fim ao processo\"” (Arbitragem e Processo, pg. 362)."
+              ]
+            },
+            {
+              "autor": "Weber, A. C.",
+              "referencia": "Lei de Arbitragem Comentada, pg. 292",
+              "tipo": "doutrina",
+              "textos": [
+                "“a sentença parcial é a decisão proferida pelos árbitros que resolve parte do litígio de forma definitiva, deixando aquilo que remanescer dos pedidos submetidos à jurisdição do tribunal arbitral para resolução em um momento posterior”. (Lei de Arbitragem Comentada, pg. 292)"
+              ]
+            },
+            {
+              "autor": "Mendes, L. V. R. C.",
+              "referencia": "Tratado de Arbitragem, pg. 550",
+              "tipo": "doutrina",
+              "textos": [
+                "“A sentença arbitral será parcial quando os árbitros resolverem apenas uma parte da disputa sem que a integralidade da controvérsia que lhes foi submetida seja encerrada. É possível, inclusive, que a decisão trate apenas de matéria procedimental como, por exemplo, na situação em que é declarada a validade da cláusula arbitral”. (Tratado de Arbitragem, pg. 550)."
+              ]
+            },
+            {
+              "autor": "Dinamarco",
+              "referencia": "Instituições de Direito Processual Civil, Vol. III",
+              "tipo": "doutrina_longa",
+              "textos": [
+                "“1.446. cisões no julgamento da causa – o julgamento antecipado parcial do mérito. Relaciona-se com o tema da divisão da sentença em capítulos o das cisões do julgamento, que, legítima ou ilegitimamente conforme o caso, ocorrem em duas situações diferentes. Conhecem-se (a) cisões referentes a parcelas do objeto do processo, decidindo o juiz sobre uma delas e mandando que o processo siga avante para a instrução e julgamento referentes às demais, e (b) cisões referentes aos fundamentos da demanda inicial ou da defesa do réu, antecipando-se a decisão de alguma questão de mérito suscitada pelas partes, sem proferir naquele momento uma sentença (nem de mérito nem terminativa).",
+                "O art. 356 do Código de Processo Civil autoriza aquela primeira espécie de cisão ao institucionalizar o julgamento antecipado do mérito, pelo qual o juiz, no momento do julgamento conforme o estado do processo, aprecia um ou alguns dos pedidos do autor, sem apreciar todos – mandando que o processo siga avante para instrução e julgamento referentes aos não decididos naquele momento. Essa cisão faz com que algum ou alguns capítulos do pedido sejam desde logo objeto de decisão (antecipada) e outros só venham a ser decididos ao fim do procedimento (supra, n. 1.345). E o ato portador do julgamento antecipado parcial do mérito é conceituado como uma decisão interlocutória e não sentença, porque não põe fim à fase cognitiva do processo (art. 203, §§ 1º-2º).",
+                "Além disso, é dever do juiz excluir desde logo do objeto do processo eventuais pretensões insuscetíveis de julgamento de mérito (ilegitimidade ad causam de um dos autores ou de um dos réus, coisa julgada relativa a um dos pedidos etc.), ou mesmo, em alguns casos, julgá-las pelo próprio mérito (prescrição, decadência). Em todos esses casos o objeto do processo será cindido e este prosseguirá pelo pedido que restar, excluídos os inadmissíveis.",
+                "É porém absolutamente contrária ao sistema a cisão consistente em apreciar uma ou algumas das questões postas no processo, sem decidir sobre a procedência ou improcedência da demanda, ainda que parcial, ou mesmo pela denegação do julgamento do mérito (sentença terminativa). Todas as questões relacionadas com o mérito devem ser solucionadas no mesmo ato com o qual o juiz decide pela procedência ou improcedência da demanda – quer se trate da sentença de mérito proferida ao fim do procedimento, quer se trate da decisão interlocutória portadora do julgamento parcial do mérito (CPC, art. 356). Quando o Código de Processo Civil diz que a sentença deve conter relatório, motivação e decisório (art. 489) isso significa que no corpo de um ato só, chamado sentença, devem estar não só a solução das questões de mérito (fundamentação) como também o preceito concreto destinado a reger as relações entre as partes, que é o decisório. Tal é o princípio da unidade estrutural da sentença, que só pode ser contrariado quando uma específica norma de direito o autorizar (Liebman).",
+                "Não é incomum, no entanto, encontrar pronunciamentos sobre a prescrição ou a decadência quando no curso do processo o juiz repele uma dessas causas extintivas de direitos ou ações, não decidindo o mérito sequer parcialmente, saneando o processo e prosseguindo em direção à sentença de mérito. Independentemente da concepção que se tenha sobre os conceitos e a função sistemática da prescrição e da decadência (supra, nn. 497 ss. e 1.116-1.117), o Código as dá como motivo para um julgamento do mérito, ou seja, elas são tomadas como fatos extintivos do direito do autor (art. 487, inc. II). A consequência é que rejeitar a prescrição ou a decadência importa afastar um dos possíveis fundamentos da improcedência da demanda, que devem ser apreciados no mesmo ato de julgamento da causa e não em decisão interlocutória isolada (arts. 487, inc. II, e 489, inc. II). Seria o mesmo que, no saneamento do processo, negar um outro fato extintivo afirmado pelo réu, como o pagamento ou a compensação, prosseguindo-se na instrução com referência aos demais pontos relevantes; ou como negar um dos fatos constitutivos arguidos na petição inicial, como a culpa do réu, prosseguindo-se para a verificação de sua responsabilidade objetiva. Diante do que é disposto no art. 487, inc. II, do Código de Processo Civil, quando no curso do processo o juiz se vir diante da alegação de prescrição ou de decadência, deduzida pelo réu, ele deve tomar uma dessas atitudes: a) ou reputa que uma dessas causas extintivas está presente e profere desde logo uma sentença de mérito (art. 487, inc. II), ou (b) deixa de acolhê-la no momento e difere seu pronunciamento a esse respeito para o momento de sentenciar. Se rejeitar desde logo a alegação, ele estará cindindo indevidamente o julgamento das questões de mérito, sendo nula essa decisão e responsável por desnecessárias dificuldades para os operadores do processo: essa decisão seria recorrível? qual recurso seria adequado? ela seria apta a ficar imunizada pela autoridade da coisa julgada material? comportaria ação rescisória?”"
+              ]
+            },
+            {
+              "autor": "CPC art. 203, § 1º",
+              "tipo": "legislacao",
+              "textos": [
+                "“sentença é o pronunciamento por meio do qual o juiz, com fundamento nos arts. 485 e 487, põe fim à fase cognitiva do procedimento comum, bem como extingue a execução”."
+              ]
+            }
+          ]
+        },
+        {
+          "subtitulo": "Arbitragem internacional",
+          "blocos": [
+            {
+              "autor": "CIArb Guideline on Jurisdictional Challenges",
+              "tipo": "diretriz",
+              "textos": [
+                "§ 2: “It is good practice for arbitrators to issue their decision as to jurisdiction in the form of an award so that such a decision (or orders as to costs contained in such a decision) can be recognised and enforced under the New York Convention.36 Arbitrators should, therefore, ensure that their award on jurisdiction complies with all the relevant requirements with which awards need to comply.37 The form of the decision may, however, vary depending on the applicable law and the outcome”.",
+                "§ 3: “If arbitrators reject the challenge and confirm that they indeed have jurisdiction, they should do so in a procedural order and then proceed to hear and make an award on the merits. If arbitrators consider that they do have jurisdiction with regard to certain matters referred to arbitration, but not to others, arbitrators should proceed to hear and rule upon those which do fall within their jurisdiction”.",
+                "NR 38: “There are jurisdictions in which only a decision rejecting jurisdiction should be made in the form of an award. See, for example, Indonesia and the Philippines where courts have refused to enforce more than a single award in a case and therefore a decision confirming jurisdiction should not be made as an award. Moreover, in Singapore a ruling on jurisdiction is not considered to be an award for the purposes of the Singapore International Arbitration Act 2012. See also Greenberg, n 11, pp. 235-240; and Lawrence Boo, ‘Ruling on Arbitral Jurisdiction: Is that an Award?’ (2007) 3(2) Asian International Arbitration Journal, pp. 125-141.”"
+              ]
+            },
+            {
+              "autor": "CIArb Guideline on Drafting Awards",
+              "tipo": "diretriz",
+              "textos": [
+                "“In the course of an arbitration arbitrators normally issue various decisions. Decisions relating to the organisation and general conduct of the arbitral proceedings which are purely procedural and/or administrative in nature should be made in the form of procedural orders or directions.4 Such decisions should be clearly distinguished from arbitral awards, which are intended to include a determination on the merits or affect the parties’ substantive rights and which can generally be enforced under the New York Convention (see Article 2 below)”.",
+                "“a partial award is considered to be an award that finally determines some, but not all, of the issues in dispute and the issues determined are not subject to later revision.14”"
+              ]
+            },
+            {
+              "autor": "Gary Born",
+              "referencia": "International Commercial Arbitration, pp. 278-279",
+              "tipo": "doutrina_longa",
+              "textos": [
+                "“Both the New York Convention and national arbitration legislation impose three basic conditions in conjunction with the concept of an arbitral “award”: (a) the award must result from an agreement to “arbitrate”; (b) the award must have certain minimal characteristics that are inherent in the concept of an “award”; and (c) the award must resolve a substantive issue, not a procedural matter. Unless these conditions are satisfied, an instrument will not be an award and will not be subject to the provisions of the Convention or national arbitration legislation”. Pg. 278",
+                "“It is also clear that only an instrument that the tribunal intends to be the final expression of its decision on some or all of the parties’ claims can be regarded as an award”. Pg. 279",
+                "“the better view is that interlocutory decisions by the arbitrators on disputed issues should generally be regarded as awards, under both the New York Convention and arbitration legislation, provided they finally dispose of a request for relief by one of the parties through an application of legal rules to a factual record. This conclusion applies, for example, to arbitral decisions on requests for provisional measures, stays of arbitration proceedings and disclosure.19”",
+                "Jurisdictional awards: “As discussed above, arbitral tribunals not infrequently resolve jurisdictional disputes, rendering either positive or negative decisions. The better view is that a positive jurisdictional decision constitutes an “award,” subject to the annulment, recognition and other provisions of local arbitration legislation. Although there are contrary authorities, the same conclusion should apply to negative jurisdictional awards: a tribunal's determination that it lacks jurisdiction should be subject to annulment, as well as recognition, as an award under both national arbitration legislation and the New York Convention.20”",
+                "Decisions Concerning Preliminary Substantive Issues: “Arbitral decisions that decide only one substantive issue also presumptively constitute “awards,\" including when the tribunal does not grant specific monetary or injunctive relief. For example, if a tribunal decides what law applies to a contract, decides issues of liability, or otherwise resolves disputed substantive issues, while not making a final disposition of all of the parties’ claims, these rulings should generally be considered awards.21 Critical to this conclusion, however, is the grant of declaratory relief, rather than merely providing reasoning in support of a conclusion; unless the tribunal makes a declaration (e.g., the respondent breached Article 4, but not Article 5, of the contract), then its reasoning is not an award.22”"
+              ]
+            },
+            {
+              "autor": "Fouchard, Gaillard, Goldman",
+              "referencia": "International Commercial Arbitration",
+              "tipo": "doutrina_longa",
+              "textos": [
+                "“This is the case with many international arbitration laws, including French law. 4 The UNCITRAL Model Law does not give a definition of an arbitral award either, despite such a definition being considered during the drafting stages. The following definition was suggested: 'award' means a final award which disposes of all issues submitted to the arbitral tribunal and any other decision of the arbitral tribunal which finally determine[s] any question of substance or the question of its competence or any other question of procedure but, in the latter case, only if the arbitral tribunal terms its decision an award. 5” This text, however, was the subject of so much disagreement, particularly with regard to whether decisions by the arbitrators concerning the jurisdiction of the arbitral tribunal and procedural issues should be considered to be awards, 6 that it was eventually abandoned. The authors of the Model Law instead decided not to give a definition at all.7 The ICC working group on interim and partial awards likewise found it impossible to reach a consensus on the issue.”",
+                "“An arbitral award can be defined as a final decision by the arbitrators on all or part of the dispute submitted to them, whether it concerns the merits of the dispute, jurisdiction, or a procedural issue leading them to end the proceedings”.",
+                "“Fourth, an award may be partial.21 Decisions by the arbitrators on issues such as jurisdiction, the applicable law, the validity of a contract or the principle of liability are in our opinion genuine arbitral awards, despite the fact that they do not decide the entire dispute and may not lead to an immediate award of damages or other redress. However, the opposite view has found support in Switzerland. Certain leading Swiss authors consider that \"decisions, and even substantive decisions, which do not rule on a claim, only constitute partial awards if they put an end to all or part of the arbitral proceedings.\" According to those authors, all decisions which \"decide substantive issues, such as the validity of the main contract, the principle of liability as opposed to the level of damages, etc.\" do not constitute arbitral awards; they are simply \"preparatory or interlocutory decisions\" which cannot be the subject of an action to set aside independent of the subsequent award on the parties' claims on the merits.22 That analysis is based on a narrow understanding of the concept of a claim which, according to these authors, covers a request for an award of damages or other redress but not for an initial finding as to liability. Along with other Swiss authors,23 we disagree with this view. A decision on jurisdiction, the applicable law or the principle of liability, for example, is a final decision on one aspect of the dispute. It should therefore be considered as an award, against which an immediate action to set aside can be brought. We are not convinced, from a theoretical standpoint, that there is a compelling justification for deferring the possibility for the parties to bring an action to set aside once the arbitrators have made a decision which they present as being final, as far as that aspect of the dispute is concerned, and binding on the parties. From a practical standpoint, such deferral would also lead to unnecessary delay and expense. If, for instance, the award on the principle of liability is to be set aside, the parties have a clear interest in knowing the outcome as soon as possible, as that may save them all or part of the cost of an expert proceeding or lengthy hearings on the quantum of damages. This is the position taken by the French courts.24 In Switzerland, the Federal Tribunal has held that, under the 1987 Private International Law Statute, an action to set aside can only be brought against awards regarding the constitution of the arbitral tribunal and its jurisdiction-even where the tribunal finds in favor of its jurisdiction-where it would cause irreparable harm not to accept the immediate action to set aside or where the award puts an end to the entire dispute.25”",
+                "“1360. - The parties may decide that the arbitrators shall rule on a particular aspect of a dispute (such as jurisdiction, the governing law or liability) by making a separate award, referred to as a partial award. To avoid confusion, we suggest that partial awards should be contrasted with global awards, rather than with final awards. As discussed above, the term \"final\" refers to the impact of the award, whether partial or not, on the portion of the dispute resolved by the arbitrators. 37”"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "titulo": "Anulatória de decisão que organiza o procedimento?",
+      "subsecoes": []
+    },
+    {
+      "titulo": "Cumprimento de sentença arbitral parcial",
+      "subsecoes": []
+    },
+    {
+      "titulo": "Complementação (art. 33, § 4º) e sentença parcial",
+      "subsecoes": []
+    }
+  ]
+}
