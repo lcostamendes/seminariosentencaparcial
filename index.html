@@ -468,7 +468,6 @@
     margin-top: 10px;
   }
 
-  /* Botão de Referência (abre Pop-up) */
   .ref-tag-btn {
     display: inline-flex;
     align-items: center;
@@ -1109,11 +1108,11 @@
   }
 
   /* =========================================
-     ESTILIZAÇÃO DO ROTEIRO (Word Ipsis Litteris)
+     ESTILIZAÇÃO DO ROTEIRO INTERATIVO (Dinâmico via JSON)
      ========================================= */
   #roteiroContainer {
     display: none;
-    padding: 45px 55px;
+    padding: 35px 50px;
     overflow-y: auto;
     height: 100%;
     background: white;
@@ -1126,7 +1125,7 @@
     color: var(--primary-color);
     font-size: 28px;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     padding-bottom: 12px;
     border-bottom: 2px solid var(--accent-color);
   }
@@ -1138,7 +1137,7 @@
   }
 
   .roteiro-item-lvl0 {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     padding-bottom: 18px;
     border-bottom: 1px solid var(--border-color);
   }
@@ -1147,7 +1146,7 @@
   }
 
   .roteiro-heading-lvl0 {
-    font-size: 16px;
+    font-size: 16.5px;
     font-weight: 700;
     color: var(--primary-color);
     display: flex;
@@ -1164,48 +1163,123 @@
     flex-shrink: 0;
   }
 
-  .roteiro-list-lvl1 {
-    list-style: none;
-    padding-left: 24px;
+  .roteiro-subsecao-box {
     margin-top: 14px;
+    margin-left: 18px;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 6px;
+    background: #fdfbfb;
+    overflow: hidden;
+  }
+  .roteiro-subsecao-box.intl {
+    border-left-color: var(--accent-color);
   }
 
-  .roteiro-item-lvl1 {
-    margin-bottom: 14px;
-    font-size: 14px;
-    color: var(--secondary-color);
-    line-height: 1.6;
-    position: relative;
-    padding-left: 16px;
+  .roteiro-subsecao-header {
+    padding: 12px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #ffffff;
+    transition: background 0.2s;
   }
-  .roteiro-item-lvl1::before {
-    content: "▸";
+  .roteiro-subsecao-header:hover {
+    background: #faf5f6;
+  }
+
+  .roteiro-subsecao-title {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  .roteiro-subsecao-box.intl .roteiro-subsecao-title {
     color: var(--accent-color);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
   }
 
-  .roteiro-list-lvl2 {
-    list-style: none;
-    padding-left: 20px;
-    margin-top: 10px;
+  .roteiro-subsecao-body {
+    display: none;
+    padding: 14px 18px;
+    border-top: 1px solid var(--border-color);
+    background: #fdfbfb;
   }
-
-  .roteiro-item-lvl2 {
-    margin-bottom: 12px;
-    font-size: 13.5px;
-    color: var(--secondary-color);
-    line-height: 1.65;
-    background: #fdf5f6;
-    border-left: 3px solid var(--accent-color);
-    padding: 12px 16px;
-    border-radius: 0 6px 6px 0;
-  }
-
-  .roteiro-subparagraph {
-    margin-top: 8px;
+  .roteiro-subsecao-box.open .roteiro-subsecao-body {
     display: block;
+  }
+
+  .roteiro-autor-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  .roteiro-autor-card:last-child {
+    margin-bottom: 0;
+  }
+
+  .roteiro-autor-header {
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: #ffffff;
+    transition: background 0.2s;
+  }
+  .roteiro-autor-header:hover {
+    background: #fdf5f6;
+  }
+
+  .roteiro-autor-name {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  .roteiro-autor-ref {
+    font-size: 11px;
+    font-style: italic;
+    color: var(--secondary-color);
+    margin-left: 6px;
+    font-weight: 400;
+  }
+
+  .roteiro-autor-body {
+    display: none;
+    padding: 12px 16px;
+    border-top: 1px solid #f2ecec;
+    background: #fdf9f9;
+  }
+  .roteiro-autor-card.open .roteiro-autor-body {
+    display: block;
+  }
+
+  .roteiro-quote-p {
+    font-size: 13px;
+    line-height: 1.65;
+    color: #2b2b2b;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 12px;
+    border-left: 3px solid var(--accent-color);
+    text-align: justify;
+    white-space: pre-line;
+  }
+  .roteiro-quote-p:last-child {
+    margin-bottom: 0;
+  }
+
+  .roteiro-destaque-pill {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: rgba(139, 28, 49, 0.1);
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 12.5px;
+    border-radius: 4px;
+    border-left: 3px solid var(--accent-color);
   }
 
   /* DETALHES DO CASO */
@@ -1950,51 +2024,10 @@
       <span style="display:block; margin-top:20px; font-size:0.9rem; opacity:0.8;">Ou utilize os botões "Roteiro" e "Quantitativos" no menu superior.</span>
     </div>
 
-    <!-- TELA DE ROTEIRO (Word Ipsis Litteris) -->
+    <!-- TELA DE ROTEIRO (Carregada via roteiro.json) -->
     <div id="roteiroContainer">
-      <h2 class="roteiro-title">Roteiro</h2>
-      <ul class="roteiro-list-lvl0">
-        <li class="roteiro-item-lvl0">
-          <div class="roteiro-heading-lvl0">Quantitativos</div>
-        </li>
-        <li class="roteiro-item-lvl0">
-          <div class="roteiro-heading-lvl0">Definição de sentença arbitral</div>
-          <ul class="roteiro-list-lvl1">
-            <li class="roteiro-item-lvl1">
-              <strong>LArb:</strong>
-              <ul class="roteiro-list-lvl2">
-                <li class="roteiro-item-lvl2">
-                  Art. 31. A sentença arbitral produz, entre as partes e seus sucessores, os mesmos efeitos da sentença proferida pelos órgãos do Poder Judiciário e, sendo condenatória, constitui título executivo.
-                </li>
-                <li class="roteiro-item-lvl2">
-                  Art. 33. A parte interessada poderá pleitear ao órgão do Poder Judiciário competente a declaração de nulidade da sentença arbitral, nos casos previstos nesta Lei.
-                  <span class="roteiro-subparagraph">
-                    § 1o A demanda para a declaração de nulidade da sentença arbitral, parcial ou final, seguirá as regras do procedimento comum, previstas na Lei no 5.869, de 11 de janeiro de 1973 (Código de Processo Civil), e deverá ser proposta no prazo de até 90 (noventa) dias após o recebimento da notificação da respectiva sentença, parcial ou final, ou da decisão do pedido de esclarecimentos
-                  </span>
-                </li>
-                <li class="roteiro-item-lvl2" style="background: rgba(139, 28, 49, 0.08); font-weight: 600; color: var(--primary-color);">
-                  Ausência de definição na lei de sentença ou de sentença parcial
-                </li>
-              </ul>
-            </li>
-            <li class="roteiro-item-lvl1">
-              CPC art. 203, § 1º: “sentença é o pronunciamento por meio do qual o juiz, com fundamento nos arts. 485 e 487, põe fim à fase cognitiva do procedimento comum, bem como extingue a execução”.
-            </li>
-            <li class="roteiro-item-lvl1" style="font-weight: 600; color: var(--accent-color);">
-              A decisão que julga uma preliminar ou uma prejudicial e segue para o julgamento do mérito seria uma sentença parcial?
-            </li>
-          </ul>
-        </li>
-        <li class="roteiro-item-lvl0">
-          <div class="roteiro-heading-lvl0">Anulatória de decisão que organiza o procedimento?</div>
-        </li>
-        <li class="roteiro-item-lvl0">
-          <div class="roteiro-heading-lvl0">Cumprimento de sentença arbitral parcial</div>
-        </li>
-        <li class="roteiro-item-lvl0">
-          <div class="roteiro-heading-lvl0">Complementação (art. 33, § 4º) e sentença parcial</div>
-        </li>
-      </ul>
+      <h2 class="roteiro-title" id="roteiroMainTitle">Roteiro</h2>
+      <ul class="roteiro-list-lvl0" id="roteiroDynamicList"></ul>
     </div>
 
     <!-- TELA DE QUANTITATIVOS -->
@@ -2096,6 +2129,97 @@
     } catch (error) {
       console.error('Erro ao carregar os casos do arquivo JSON:', error);
       document.getElementById('counter').innerText = 'Erro ao carregar dados';
+    }
+  }
+
+  // Carrega dinamicamente o arquivo roteiro.json
+  async function carregarRoteiro() {
+    try {
+      const response = await fetch('roteiro.json');
+      const data = await response.json();
+      renderizarRoteiro(data);
+    } catch (error) {
+      console.error('Erro ao carregar roteiro.json:', error);
+      document.getElementById('roteiroDynamicList').innerHTML = '<li style="color:#8b1c31;">Erro ao carregar roteiro.json. Verifique se o arquivo está no repositório.</li>';
+    }
+  }
+
+  function renderizarRoteiro(data) {
+    if (data.titulo) {
+      document.getElementById('roteiroMainTitle').innerText = data.titulo;
+    }
+    const ul = document.getElementById('roteiroDynamicList');
+    ul.innerHTML = '';
+
+    (data.secoes || []).forEach((sec, idxSec) => {
+      const li = document.createElement('li');
+      li.className = 'roteiro-item-lvl0';
+
+      let html = `<div class="roteiro-heading-lvl0">${sec.titulo}</div>`;
+
+      if (sec.subsecoes && sec.subsecoes.length > 0) {
+        sec.subsecoes.forEach((sub, idxSub) => {
+          const isIntl = sub.subtitulo.toLowerCase().includes('internacional');
+          const subId = `rot-sub-${idxSec}-${idxSub}`;
+
+          html += `
+            <div id="${subId}" class="roteiro-subsecao-box ${isIntl ? 'intl' : ''}">
+              <div class="roteiro-subsecao-header" onclick="toggleRoteiroBox('${subId}', 'hint-${subId}')">
+                <span class="roteiro-subsecao-title">${sub.subtitulo}</span>
+                <span class="perspective-toggle-hint" id="hint-${subId}">Exibir +</span>
+              </div>
+              <div class="roteiro-subsecao-body">
+          `;
+
+          (sub.blocos || []).forEach((bloco, idxBloco) => {
+            const cardId = `rot-card-${idxSec}-${idxSub}-${idxBloco}`;
+            const refHtml = bloco.referencia ? `<span class="roteiro-autor-ref">(${bloco.referencia})</span>` : '';
+
+            html += `
+              <div id="${cardId}" class="roteiro-autor-card">
+                <div class="roteiro-autor-header" onclick="toggleRoteiroBox('${cardId}', 'hint-${cardId}')">
+                  <div>
+                    <span class="roteiro-autor-name">${bloco.autor}</span>
+                    ${refHtml}
+                  </div>
+                  <span class="perspective-toggle-hint" id="hint-${cardId}">Abrir +</span>
+                </div>
+                <div class="roteiro-autor-body">
+            `;
+
+            (bloco.textos || []).forEach(txt => {
+              html += `<p class="roteiro-quote-p">${txt}</p>`;
+            });
+
+            if (bloco.destaque) {
+              html += `<div class="roteiro-destaque-pill">${bloco.destaque}</div>`;
+            }
+
+            html += `
+                </div>
+              </div>
+            `;
+          });
+
+          html += `
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      li.innerHTML = html;
+      ul.appendChild(li);
+    });
+  }
+
+  function toggleRoteiroBox(boxId, hintId) {
+    const box = document.getElementById(boxId);
+    const hint = document.getElementById(hintId);
+    if (!box) return;
+    const isOpen = box.classList.toggle('open');
+    if (hint) {
+      hint.innerText = isOpen ? 'Ocultar −' : 'Exibir +';
     }
   }
 
@@ -2501,7 +2625,10 @@
   filterAnulada.addEventListener('change', processCases);
   sortCases.addEventListener('change', processCases);
 
-  document.addEventListener('DOMContentLoaded', carregarCasos);
+  document.addEventListener('DOMContentLoaded', () => {
+    carregarCasos();
+    carregarRoteiro();
+  });
 </script>
 </body>
 </html>
