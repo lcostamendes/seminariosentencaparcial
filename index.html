@@ -101,14 +101,73 @@
     align-items: center;
     justify-content: center;
   }
-  .btn-avancar:hover { background-color: var(--accent-color); transform: translateY(-2px); box-shadow: 0 8px 15px rgba(139, 28, 49, 0.2); color: white; }
-  .btn-outline { background: transparent; border: 1px solid var(--primary-color); color: var(--primary-color); }
-  .btn-outline:hover { background: var(--bg-light); color: var(--primary-color); }
+  .btn-avancar:hover { 
+    background-color: var(--accent-color); 
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 15px rgba(139, 28, 49, 0.2); 
+    color: white; 
+  }
+  .btn-outline { 
+    background: transparent; 
+    border: 1px solid var(--primary-color); 
+    color: var(--primary-color); 
+  }
+  .btn-outline:hover { 
+    background: var(--bg-light); 
+    color: var(--primary-color); 
+  }
 
-  .btn-live-cbma { background: linear-gradient(135deg, #1E5839 0%, #2F8557 100%); color: white; padding: 11px 22px; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: all 0.3s ease; }
-  .btn-live-cbma:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(30, 88, 57, 0.35); }
-  .btn-live-icc { background: linear-gradient(135deg, #0b2545 0%, #134074 100%); color: white; padding: 11px 22px; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; border: none; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; transition: all 0.3s ease; }
-  .btn-live-icc:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(11, 37, 69, 0.35); }
+  .btn-live-cbma { 
+    background: linear-gradient(135deg, #1E5839 0%, #2F8557 100%); 
+    color: white; 
+    padding: 11px 22px; 
+    font-size: 11px; 
+    font-family: var(--font-body);
+    font-weight: 700; 
+    letter-spacing: 1.2px; 
+    text-transform: uppercase; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 7px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 12px rgba(30, 88, 57, 0.25);
+  }
+  .btn-live-cbma:hover { 
+    background: linear-gradient(135deg, #143e28 0%, #1E5839 100%);
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 16px rgba(30, 88, 57, 0.35); 
+    color: white;
+  }
+
+  .btn-live-icc { 
+    background: linear-gradient(135deg, #0b2545 0%, #134074 100%); 
+    color: white; 
+    padding: 11px 22px; 
+    font-size: 11px; 
+    font-family: var(--font-body);
+    font-weight: 700; 
+    letter-spacing: 1.2px; 
+    text-transform: uppercase; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 7px; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 12px rgba(11, 37, 69, 0.25);
+  }
+  .btn-live-icc:hover { 
+    background: linear-gradient(135deg, #07192f 0%, #0b2545 100%);
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 16px rgba(11, 37, 69, 0.35); 
+    color: white;
+  }
 
   .dark-bg {
     background-color: #1a0508; 
@@ -119,7 +178,16 @@
 
   /* TELA 1: CAPA */
   .intro-logo { max-width: 140px; margin-bottom: 25px; }
-  .intro-proc { font-size: 14px; color: var(--accent-color); margin-bottom: 30px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; border-bottom: 1px solid rgba(139, 28, 49, 0.25); padding-bottom: 10px; }
+  .intro-proc { 
+    font-size: 14px; 
+    color: var(--accent-color); 
+    margin-bottom: 30px; 
+    font-weight: 600; 
+    letter-spacing: 3px; 
+    text-transform: uppercase; 
+    border-bottom: 1px solid rgba(139, 28, 49, 0.25); 
+    padding-bottom: 10px; 
+  }
   .intro-parties { display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%; }
   .intro-parties h2 { font-size: 26px; color: var(--primary-color); margin: 0; font-weight: 400; letter-spacing: 0.5px; line-height: 1.4; }
 
@@ -184,7 +252,7 @@
   .funcoes-destaque { background: rgba(139, 28, 49, 0.06); border-radius: 4px; padding: 10px 12px 10px 28px !important; border-left: 3px solid var(--accent-color) !important; border-bottom: none !important; margin-top: 12px !important; }
   .funcoes-destaque::before { left: 8px !important; top: 10px !important; color: var(--accent-color) !important; }
 
-  /* NOVO: TELA GUERRILHA TACTICS */
+  /* TELA 5: TÁTICAS DE GUERRILHA */
   .guerrilha-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -200,7 +268,7 @@
   .guerrilha-grid::-webkit-scrollbar { width: 6px; }
   .guerrilha-grid::-webkit-scrollbar-thumb { background: rgba(139, 28, 49, 0.2); border-radius: 3px; }
 
-  /* MODAIS */
+  /* MODAIS DOUTRINÁRIOS */
   .doc-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(17, 5, 8, 0.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 10000; justify-content: center; align-items: center; padding: 25px; box-sizing: border-box; animation: fadeInModal 0.25s ease forwards; }
   .doc-modal-overlay.active { display: flex; }
   @keyframes fadeInModal { from { opacity: 0; } to { opacity: 1; } }
@@ -215,9 +283,10 @@
   .doc-modal-body::-webkit-scrollbar { width: 7px; }
   .doc-modal-body::-webkit-scrollbar-thumb { background: rgba(139, 28, 49, 0.25); border-radius: 4px; }
   .doc-quote-block { background: #fdf9f9; border-left: 4px solid var(--accent-color); padding: 16px 20px; border-radius: 0 6px 6px 0; margin-bottom: 18px; }
+  .doc-quote-block:last-child { margin-bottom: 0; }
   .doc-quote-title { font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--primary-color); margin-bottom: 8px; display: block; }
 
-  /* EXOPROCESSUAL */
+  /* METODOLOGIA EXOPROCESSUAL */
   .totalizer-badge { background: var(--accent-color); color: white; padding: 8px 20px; border-radius: 30px; font-size: 16px; font-family: var(--font-heading); font-weight: 600; margin-bottom: 20px; letter-spacing: 1px; display: inline-block; box-shadow: 0 4px 10px rgba(139, 28, 49, 0.2); }
   .methodology-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; text-align: left; margin-bottom: 15px; }
   .methodology-col { background: rgba(255,255,255,0.7); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); }
@@ -230,7 +299,7 @@
   .methodology-col .level-4 { margin-left: 45px; }
   .methodology-highlight { font-weight: bold; color: var(--primary-color); background: rgba(139, 28, 49, 0.08); padding: 2px 6px; border-radius: 4px; }
 
-  /* CBMA EFEITOS ENDOPROCESSUAIS */
+  /* EFEITOS ENDOPROCESSUAIS (CBMA) */
   .endo-kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; margin-bottom: 22px; }
   .endo-kpi-card { background: rgba(255, 255, 255, 0.85); border: 1px solid var(--border-color); border-radius: 8px; padding: 14px 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.03); }
   .endo-kpi-num { font-family: var(--font-heading); font-size: 24px; font-weight: 700; color: var(--accent-color); }
@@ -238,25 +307,29 @@
   .formula-box { background: #fdf5f6; border: 1px solid rgba(139, 28, 49, 0.25); border-left: 4px solid var(--accent-color); padding: 14px 18px; border-radius: 6px; width: 100%; box-sizing: border-box; text-align: left; margin-bottom: 22px; }
   .formula-code { font-family: 'Courier New', Courier, monospace; font-size: 13px; font-weight: bold; color: var(--accent-color); background: rgba(139, 28, 49, 0.08); padding: 5px 10px; border-radius: 4px; display: inline-block; margin-top: 6px; }
 
+  /* COMPARAÇÃO DE DIAS E INCIDENTES */
   .comp-chart-group { width: 100%; text-align: left; margin-bottom: 16px; background: white; padding: 15px 20px; border-radius: 8px; border: 1px solid var(--border-color); box-shadow: 0 2px 6px rgba(0,0,0,0.02); box-sizing: border-box; }
   .comp-group-title { font-size: 13px; font-weight: 700; color: var(--primary-color); margin-bottom: 10px; border-bottom: 2px solid var(--accent-color); padding-bottom: 4px; display: flex; justify-content: space-between; align-items: center; }
   .comp-row { margin-bottom: 10px; }
+  .comp-row:last-child { margin-bottom: 0; }
   .comp-row-header { display: flex; justify-content: space-between; font-size: 11.5px; font-weight: 600; color: var(--primary-color); margin-bottom: 4px; }
   .comp-track { width: 100%; height: 15px; background: #eee8e8; border-radius: 4px; overflow: hidden; position: relative; }
   .comp-bar { height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 6px; font-size: 9.5px; font-weight: bold; color: white; box-sizing: border-box; transition: width 0.8s ease; }
 
   /* DASHBOARD E ROTEIRO */
   #left-panel { width: 38%; height: 100vh; overflow-y: hidden; background-color: #ffffff; border-right: 1px solid var(--border-color); display: flex; flex-direction: column; box-shadow: 5px 0 25px rgba(0,0,0,0.05); z-index: 2; }
-  .left-header { padding: 15px 20px; background: linear-gradient(135deg, var(--accent-color) 0%, #5a101f 100%); color: white; border-bottom: 3px solid var(--primary-color); display: flex; justify-content: space-between; align-items: center; }
-  .left-header h2 { margin: 0; font-size: 15px; font-weight: 600; font-family: var(--font-heading); color: white; }
-  .btn-header { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.4); color: white; padding: 6px 10px; border-radius: 4px; cursor: pointer; transition: all 0.3s; font-size: 9.5px; font-weight: 600; text-transform: uppercase; }
-  .btn-header:hover { background: rgba(255, 255, 255, 0.28); }
+  .left-header { padding: 15px 20px; background: linear-gradient(135deg, var(--accent-color) 0%, #5a101f 100%); color: white; border-bottom: 3px solid var(--primary-color); display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 10; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+  .left-header h2 { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.8px; font-family: var(--font-heading); color: white; }
+  .btn-header { background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.4); color: white; padding: 6px 10px; border-radius: 4px; cursor: pointer; transition: all 0.3s; font-family: var(--font-body); font-size: 9.5px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; }
+  .btn-header:hover { background: rgba(255, 255, 255, 0.28); color: white; }
   .filters { padding: 8px 15px; border-bottom: 1px solid var(--border-color); background: #fff; flex-shrink: 0; }
   .filters-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 10px; }
   .filter-group { display: flex; flex-direction: column; }
   .filter-search { grid-column: span 2; }
   .filters label { font-size: 0.58rem; font-weight: bold; color: var(--secondary-color); margin-bottom: 2px; text-transform: uppercase; }
-  .filters input, .filters select { width: 100%; padding: 3.5px 7px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.72rem; box-sizing: border-box; }
+  .filters input, .filters select { width: 100%; padding: 3.5px 7px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 0.72rem; font-family: var(--font-body); box-sizing: border-box; }
+  .filters select:focus, .filters input:focus { outline: none; border-color: var(--accent-color); }
+  
   .case-list { flex: 1; overflow-y: auto; padding: 0; list-style: none; margin: 0; }
   .case-item { padding: 15px 25px; border-bottom: 1px solid var(--border-color); cursor: pointer; transition: background 0.2s; }
   .case-item:hover { background: var(--bg-light); }
@@ -264,28 +337,36 @@
   .case-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 5px; color: var(--primary-color); }
   .case-meta { font-size: 0.75rem; color: var(--secondary-color); margin-bottom: 5px; }
   .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; background: var(--bg-light); color: var(--secondary-color); border: 1px solid var(--border-color); margin-right: 4px; margin-bottom: 4px; }
+  
   #right-panel { width: 62%; display: flex; flex-direction: column; background-color: var(--bg-light); position: relative; overflow: hidden; }
   .empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: var(--secondary-color); font-size: 1.1rem; text-align: center; padding: 20px; font-family: var(--font-heading); }
 
-  #roteiroContainer { display: none; padding: 35px 50px; overflow-y: auto; height: 100%; background: white; text-align: left; }
+  #roteiroContainer { display: none; padding: 35px 50px; overflow-y: auto; height: 100%; background: white; text-align: left; box-sizing: border-box; }
   .roteiro-title { font-family: var(--font-heading); color: var(--primary-color); font-size: 28px; margin-top: 0; margin-bottom: 22px; padding-bottom: 12px; border-bottom: 2px solid var(--accent-color); }
   .roteiro-list-lvl0 { list-style: none; padding-left: 0; margin: 0; }
   .roteiro-item-lvl0 { margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--border-color); }
+  .roteiro-item-lvl0:last-child { border-bottom: none; }
   .roteiro-heading-lvl0 { font-size: 16.5px; font-weight: 700; color: var(--primary-color); display: flex; align-items: center; gap: 10px; }
-  .roteiro-heading-lvl0::before { content: ""; display: inline-block; width: 8px; height: 8px; background-color: var(--accent-color); border-radius: 50%; }
+  .roteiro-heading-lvl0::before { content: ""; display: inline-block; width: 8px; height: 8px; background-color: var(--accent-color); border-radius: 50%; flex-shrink: 0; }
   .roteiro-subsecao-box { margin-top: 14px; margin-left: 18px; border: 1px solid var(--border-color); border-left: 4px solid var(--primary-color); border-radius: 6px; background: #fdfbfb; overflow: hidden; }
   .roteiro-subsecao-box.intl { border-left-color: var(--accent-color); }
-  .roteiro-subsecao-header { padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: #ffffff; }
+  .roteiro-subsecao-header { padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: #ffffff; transition: background 0.2s; }
+  .roteiro-subsecao-header:hover { background: #faf5f6; }
   .roteiro-subsecao-title { font-family: var(--font-heading); font-size: 16px; font-weight: 700; color: var(--primary-color); }
-  .roteiro-subsecao-body { display: none; padding: 14px 18px; border-top: 1px solid var(--border-color); }
+  .roteiro-subsecao-box.intl .roteiro-subsecao-title { color: var(--accent-color); }
+  .roteiro-subsecao-body { display: none; padding: 14px 18px; border-top: 1px solid var(--border-color); background: #fdfbfb; }
   .roteiro-subsecao-box.open .roteiro-subsecao-body { display: block; }
   .roteiro-autor-card { background: #ffffff; border: 1px solid var(--border-color); border-radius: 6px; margin-bottom: 10px; overflow: hidden; }
-  .roteiro-autor-header { padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: #ffffff; }
+  .roteiro-autor-card:last-child { margin-bottom: 0; }
+  .roteiro-autor-header { padding: 10px 14px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: #ffffff; transition: background 0.2s; }
+  .roteiro-autor-header:hover { background: #fdf5f6; }
   .roteiro-autor-name { font-size: 13.5px; font-weight: 700; color: var(--primary-color); }
   .roteiro-autor-ref { font-size: 11px; font-style: italic; color: var(--secondary-color); margin-left: 6px; font-weight: 400; }
   .roteiro-autor-body { display: none; padding: 12px 16px; border-top: 1px solid #f2ecec; background: #fdf9f9; }
   .roteiro-autor-card.open .roteiro-autor-body { display: block; }
   .roteiro-quote-p { font-size: 13px; line-height: 1.65; color: #2b2b2b; margin-top: 0; margin-bottom: 10px; padding-left: 12px; border-left: 3px solid var(--accent-color); text-align: justify; white-space: pre-line; }
+  .roteiro-quote-p:last-child { margin-bottom: 0; }
+  .roteiro-destaque-pill { margin-top: 10px; padding: 8px 12px; background: rgba(139, 28, 49, 0.1); color: var(--accent-color); font-weight: 700; font-size: 12.5px; border-radius: 4px; border-left: 3px solid var(--accent-color); }
 
   #detailsContainer { display: none; padding: 40px; overflow-y: auto; height: 100%; background: white; }
   .detail-header { margin-bottom: 20px; padding-bottom: 15px; border-bottom: 2px solid var(--bg-light); }
@@ -297,12 +378,15 @@
   .section-title { font-size: 1.2rem; color: var(--accent-color); margin: 30px 0 15px; padding-bottom: 5px; border-bottom: 1px solid var(--border-color); font-family: var(--font-heading); }
   .text-content { font-size: 0.9rem; line-height: 1.6; color: var(--secondary-color); white-space: pre-wrap; background: #fff; padding: 20px; border: 1px solid var(--border-color); border-radius: 6px; }
   .comments { background: #fdf5f6; border-left: 4px solid var(--accent-color); }
-  .btn-action { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; background: var(--primary-color); color: white; border: none; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.3s; margin-top: 20px; width: 100%; text-transform: uppercase; letter-spacing: 2px; }
+  .btn-action { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; background: var(--primary-color); color: white; border: none; border-radius: 4px; font-weight: 600; font-size: 13px; cursor: pointer; transition: background 0.3s; margin-top: 20px; width: 100%; text-transform: uppercase; letter-spacing: 2px; font-family: var(--font-body); }
+  .btn-action:hover { background: var(--secondary-color); }
 
   #pdfContainer { display: none; flex-direction: column; height: 100%; width: 100%; background: #e2e8f0; }
-  .pdf-header { padding: 12px 25px; background: white; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; }
-  .btn-back { padding: 8px 16px; background: white; border: 1px solid var(--border-color); border-radius: 4px; cursor: pointer; font-weight: 600; color: var(--secondary-color); transition: all 0.2s; font-size: 11px; text-transform: uppercase; }
-  .btn-drive { padding: 8px 16px; background: var(--accent-color); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.2s; font-size: 11px; text-transform: uppercase; }
+  .pdf-header { padding: 12px 25px; background: white; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+  .btn-back { padding: 8px 16px; background: white; border: 1px solid var(--border-color); border-radius: 4px; cursor: pointer; font-weight: 600; color: var(--secondary-color); transition: all 0.2s; font-family: var(--font-body); font-size: 11px; text-transform: uppercase; }
+  .btn-back:hover { background: var(--bg-light); color: var(--primary-color); }
+  .btn-drive { padding: 8px 16px; background: var(--accent-color); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; transition: all 0.2s; font-family: var(--font-body); font-size: 11px; text-transform: uppercase; }
+  .btn-drive:hover { background: var(--accent-hover); }
   #pdfContainer iframe { width: 100%; flex: 1; border: none; }
 </style>
 </head>
@@ -448,18 +532,89 @@
   </div>
 </div>
 
-<!-- MODAIS DA TELA 3 MANTIDOS -->
+<!-- MODAIS DA INTRODUÇÃO (TEXTOS COMPLETOS) -->
 <div id="modal-larb-cpc" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-larb-cpc')">
   <div class="doc-modal-card" onclick="event.stopPropagation()">
-    <div class="doc-modal-header"><div><h3>Legislação Brasileira</h3></div><button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-larb-cpc')">✕ Fechar</button></div>
+    <div class="doc-modal-header">
+      <div>
+        <h3>Legislação Brasileira</h3>
+        <div class="doc-modal-subtitle">Lei de Arbitragem (Lei nº 9.307/96) & Código de Processo Civil (CPC/15)</div>
+      </div>
+      <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-larb-cpc')">✕ Fechar</button>
+    </div>
     <div class="doc-modal-body">
-      <div class="doc-quote-block"><p><strong>Art. 31.</strong> A sentença arbitral produz, entre as partes e seus sucessores, os mesmos efeitos da sentença proferida pelos órgãos do Poder Judiciário e, sendo condenatória, constitui título executivo.</p></div>
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">Lei nº 9.307/1996 (Lei de Arbitragem):</span>
+        <p><strong>Art. 31.</strong> A sentença arbitral produz, entre as partes e seus sucessores, os mesmos efeitos da sentença proferida pelos órgãos do Poder Judiciário e, sendo condenatória, constitui título executivo.</p>
+        <p><strong>Art. 33.</strong> A parte interessada poderá pleitear ao órgão do Poder Judiciário competente a declaração de nulidade da sentença arbitral, nos casos previstos nesta Lei.</p>
+        <p><strong>§ 1º</strong> A demanda para a declaração de nulidade da sentença arbitral, parcial ou final, seguirá as regras do procedimento comum, previstas na Lei nº 5.869, de 11 de janeiro de 1973 (Código de Processo Civil), e deverá ser proposta no prazo de até 90 (noventa) dias após o recebimento da notificação da respectiva sentença, parcial ou final, ou da decisão do pedido de esclarecimentos.</p>
+      </div>
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">Código de Processo Civil (CPC/2015):</span>
+        <p><strong>Art. 203, § 1º:</strong> “sentença é o pronunciamento por meio do qual o juiz, com fundamento nos arts. 485 e 487, põe fim à fase cognitiva do procedimento comum, bem como extingue a execução”.</p>
+      </div>
     </div>
   </div>
 </div>
-<div id="modal-dinamarco" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-dinamarco')"><div class="doc-modal-card" onclick="event.stopPropagation()"><div class="doc-modal-header"><div><h3>Cândido Rangel Dinamarco</h3></div><button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-dinamarco')">✕ Fechar</button></div><div class="doc-modal-body"><div class="doc-quote-block"><p>O art. 356 do Código de Processo Civil autoriza aquela primeira espécie de cisão ao institucionalizar o julgamento antecipado do mérito...</p></div></div></div></div>
-<div id="modal-fouchard" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-fouchard')"><div class="doc-modal-card" onclick="event.stopPropagation()"><div class="doc-modal-header"><div><h3>Fouchard, Gaillard, Goldman</h3></div><button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-fouchard')">✕ Fechar</button></div><div class="doc-modal-body"><div class="doc-quote-block"><p>“An arbitral award can be defined as a final decision by the arbitrators on all or part of the dispute submitted to them...”</p></div></div></div></div>
-<div id="modal-born" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-born')"><div class="doc-modal-card" onclick="event.stopPropagation()"><div class="doc-modal-header"><div><h3>Gary Born</h3></div><button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-born')">✕ Fechar</button></div><div class="doc-modal-body"><div class="doc-quote-block"><p>“As discussed above, arbitral tribunals not infrequently resolve jurisdictional disputes, rendering either positive or negative decisions...”</p></div></div></div></div>
+
+<div id="modal-dinamarco" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-dinamarco')">
+  <div class="doc-modal-card" onclick="event.stopPropagation()">
+    <div class="doc-modal-header">
+      <div>
+        <h3>Cândido Rangel Dinamarco</h3>
+        <div class="doc-modal-subtitle">Instituições de Direito Processual Civil – Vol. III</div>
+      </div>
+      <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-dinamarco')">✕ Fechar</button>
+    </div>
+    <div class="doc-modal-body">
+      <div class="doc-quote-block">
+        <p><strong>1. “1.446. cisões no julgamento da causa – o julgamento antecipado parcial do mérito.</strong> Relaciona-se com o tema da divisão da sentença em capítulos o das cisões do julgamento, que, legítima ou ilegitimamente conforme o caso, ocorrem em duas situações diferentes. Conhecem-se <em>(a)</em> cisões referentes a <em>parcelas do objeto do processo</em>, decidindo o juiz sobre uma delas e mandando que o processo siga avante para a instrução e julgamento referentes às demais, e <em>(b)</em> cisões referentes aos <em>fundamentos</em> da demanda inicial ou da defesa do réu, antecipando-se a decisão de alguma questão de mérito suscitada pelas partes, sem proferir naquele momento uma sentença (nem de mérito nem terminativa).</p>
+        <p>O art. 356 do Código de Processo Civil autoriza aquela primeira espécie de cisão ao institucionalizar o <em>julgamento antecipado do mérito</em>, pelo qual o juiz, no momento do julgamento conforme o estado do processo, aprecia um ou alguns dos pedidos do autor, sem apreciar todos – mandando que o processo siga avante para instrução e julgamento referentes aos não decididos naquele momento. Essa cisão faz com que algum ou alguns capítulos do pedido sejam desde logo objeto de decisão (antecipada) e outros só venham a ser decididos ao fim do procedimento. E o ato portador do julgamento antecipado parcial do mérito é conceituado como uma <em>decisão interlocutória</em> e não sentença, porque não põe fim à fase cognitiva do processo (art. 203, §§ 1º-2º).</p>
+        <p>É porém absolutamente contrária ao sistema a cisão consistente em apreciar uma ou algumas das <em>questões</em> postas no processo, sem decidir sobre a procedência ou improcedência da demanda, ainda que parcial, ou mesmo pela denegação do julgamento do mérito (sentença terminativa). Todas as questões relacionadas com o mérito devem ser solucionadas no mesmo ato com o qual o juiz decide pela procedência ou improcedência da demanda... Tal é o <em>princípio da unidade estrutural da sentença</em>, que só pode ser contrariado quando uma específica norma de direito o autorizar (Liebman).”</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-fouchard" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-fouchard')">
+  <div class="doc-modal-card" onclick="event.stopPropagation()">
+    <div class="doc-modal-header">
+      <div>
+        <h3>Fouchard, Gaillard, Goldman</h3>
+        <div class="doc-modal-subtitle">International Commercial Arbitration</div>
+      </div>
+      <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-fouchard')">✕ Fechar</button>
+    </div>
+    <div class="doc-modal-body">
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">Concept of Arbitral Award:</span>
+        <p>“An arbitral award can be defined as a final decision by the arbitrators on all or part of the dispute submitted to them, whether it concerns the merits of the dispute, jurisdiction, or a procedural issue leading them to end the proceedings”.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="modal-born" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-born')">
+  <div class="doc-modal-card" onclick="event.stopPropagation()">
+    <div class="doc-modal-header">
+      <div>
+        <h3>Gary Born</h3>
+        <div class="doc-modal-subtitle">International Commercial Arbitration</div>
+      </div>
+      <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-born')">✕ Fechar</button>
+    </div>
+    <div class="doc-modal-body">
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">1. Jurisdictional awards:</span>
+        <p>“As discussed above, arbitral tribunals not infrequently resolve jurisdictional disputes, rendering either positive or negative decisions. The better view is that a positive jurisdictional decision constitutes an “award,” subject to the annulment, recognition and other provisions of local arbitration legislation. Although there are contrary authorities, the same conclusion should apply to negative jurisdictional awards: a tribunal's determination that it lacks jurisdiction should be subject to annulment, as well as recognition, as an award under both national arbitration legislation and the New York Convention.”</p>
+      </div>
+      <div class="doc-quote-block">
+        <span class="doc-quote-title">2. Decisions Concerning Preliminary Substantive Issues:</span>
+        <p>“Arbitral decisions that decide only one substantive issue also presumptively constitute “awards," including when the tribunal does not grant specific monetary or injunctive relief. For example, if a tribunal decides what law applies to a contract, decides issues of liability, or otherwise resolves disputed substantive issues, while not making a final disposition of all of the parties’ claims, these rulings should generally be considered awards.”</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- TELA 4: PESQUISA JURISPRUDENCIAL -->
 <div id="screen-methodology" class="screen dark-bg">
@@ -472,6 +627,9 @@
         <ul>
           <li>Busca no STJ: <em>arbitragem (e) sentença (e) parcial</em></li>
           <li><span class="methodology-highlight">36 acórdãos</span> foram identificados</li>
+          <li>Segregação manual:<br>
+            <span style="font-size: 11px; opacity: 0.8; display: block; margin-top: 5px;">Exclusão de: dissolução parcial de sociedade por arbitragem, sentença arbitral com provimento ou procedência parcial etc.</span>
+          </li>
           <li style="margin-top: 15px;"><span class="methodology-highlight">12 casos remanescentes</span></li>
         </ul>
       </div>
@@ -493,7 +651,7 @@
 </div>
 
 <!-- ========================================================
-     NOVA TELA 5: O RISCO DA BIFURCAÇÃO COMO TÁTICA DE GUERRILHA
+     TELA 5: O RISCO DA BIFURCAÇÃO COMO TÁTICA DE GUERRILHA
      ======================================================== -->
 <div id="screen-guerrilha" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 1050px; padding: 35px 50px;">
@@ -507,7 +665,7 @@
       Perspectiva da doutrina internacional sobre o uso da bifurcação processual para atrasar e obstruir o procedimento, criando uma falsa eficiência.
     </div>
 
-    <!-- O CONTEÚDO SERÁ INJETADO AQUI VIA JS A PARTIR DO JSON -->
+    <!-- O CONTEÚDO É INJETADO AQUI VIA JS A PARTIR DE bifurcacao.json -->
     <div id="guerrilhaContainer" class="guerrilha-grid">
       <div style="color:var(--secondary-color); font-style:italic;">Carregando dados da doutrina...</div>
     </div>
@@ -519,59 +677,243 @@
   </div>
 </div>
 
-<!-- TELA 6: SISTEMA CBMA -->
+<!-- ========================================================
+     PARTE 1 DO CBMA: PREMISSAS E VISÃO GERAL (INDEX.HTML INTEGRAL)
+     ======================================================== -->
 <div id="screen-endo-intro" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 900px; padding: 35px 50px;">
-    <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 24px; margin-bottom: 5px;">Sistema de Automatização CBMA</h2>
+    <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 24px; margin-bottom: 5px;">II. Efeitos Endoprocessuais</h2>
     <div style="font-size: 13px; color: var(--secondary-color); margin-bottom: 22px;">
-      Base empírica: Impacto temporal e métricas de eficiência no sistema do CBMA.
+      Base empírica: Sistema de Automatização de Calendários Processuais do CBMA (prazos aprovados em diretoria).
     </div>
+
+    <!-- KPIs do Sistema -->
     <div class="endo-kpi-grid">
-      <div class="endo-kpi-card"><div class="endo-kpi-num">35.478</div><div class="endo-kpi-label">Cenários Combinatórios</div></div>
-      <div class="endo-kpi-card"><div class="endo-kpi-num">17.496</div><div class="endo-kpi-label">Calendários Únicos</div></div>
-      <div class="endo-kpi-card"><div class="endo-kpi-num">250 a 1.630</div><div class="endo-kpi-label">Dias Corridos Estimados</div></div>
+      <div class="endo-kpi-card">
+        <div class="endo-kpi-num">35.478</div>
+        <div class="endo-kpi-label">Cenários Combinatórios</div>
+      </div>
+      <div class="endo-kpi-card">
+        <div class="endo-kpi-num">17.496</div>
+        <div class="endo-kpi-label">Calendários</div>
+      </div>
+      <div class="endo-kpi-card">
+        <div class="endo-kpi-num">250 a 1.630</div>
+        <div class="endo-kpi-label">Dias Corridos (8 a 54 Meses)</div>
+      </div>
     </div>
-    <div style="display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap; margin-top: 20px;">
+
+    <!-- Mecânica e Fórmula Combinatória -->
+    <div class="formula-box">
+      <div style="font-weight: bold; font-size: 13px; color: var(--primary-color); margin-bottom: 6px;">
+        Mecânica Algorítmica das Escolhas Procedimentais:
+      </div>
+      <div style="font-size: 12px; color: var(--secondary-color); line-height: 1.6;">
+        • <strong>3 ramos de Preliminares / Jurisdição:</strong> Não; Bifurcada s/ audiência (Aba 02); Bifurcada c/ audiência (Aba 01).<br>
+        • <strong>3 ramos de Cautelares de Urgência:</strong> Não; Prévia s/ audiência (Aba 04); Prévia c/ audiência (Aba 03).<br>
+        • <strong>2 ramos de Exibição de Documentos:</strong> Não (+0d) ou Sim (+100d na Aba 05).<br>
+        • <strong>27 matrizes de Instrução e Mérito:</strong> 3 contrapostos × 3 modalidades de testemunhas × 3 modelos de perícia.<br>
+        • <strong>73 ramos de Liquidação de Sentença:</strong> 1 concomitante desde a inicial + 72 autônomas pós-sentença parcial (18 matrizes × 2 exibições × 2 audiências).
+      </div>
+      <div style="margin-top: 10px;">
+        <span class="formula-code">3 × 3 × 2 × 27 × (1 + 72) = 35.478 Cenários Operacionais</span>
+        <span style="display:block; font-size:11px; color:#777; margin-top:4px;">*Cruzando os 486 ramos prévios com as 36 matrizes estruturais de liquidação: <strong>17.496 calendários autônomos únicos</strong>.</span>
+      </div>
+    </div>
+
+    <!-- Ações e Navegação com Botões CBMA e ICC -->
+    <div style="display: flex; gap: 12px; align-items: center; justify-content: center; flex-wrap: wrap;">
       <button class="btn-avancar btn-outline" style="margin-top:0;" onclick="mudarTela('screen-guerrilha')">Voltar ao Risco da Bifurcação</button>
       <a href="https://calendarios.cbma.com.br/" target="_blank" class="btn-live-cbma">Navegar no Sistema CBMA ↗</a>
+      <a href="https://iccwbo.org/wp-content/uploads/sites/3/2018/04/icc-model-procedural-timetable-portuguese-1.pdf" target="_blank" class="btn-live-icc">Timetable Modelo CCI / ICC ↗</a>
       <button class="btn-avancar" style="margin-top:0;" onclick="mudarTela('screen-endo-comparativo')">Análise Comparativa de Prazos →</button>
     </div>
   </div>
 </div>
 
-<!-- TELA 7: ANÁLISE COMPARATIVA DE PRAZOS -->
+<!-- ========================================================
+     PARTE 2 DO CBMA: IMPACTO TEMPORAL E QUANTIDADE DE DIAS DE CADA INCIDENTE (INDEX.HTML INTEGRAL)
+     ======================================================== -->
 <div id="screen-endo-comparativo" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 950px; padding: 25px 40px;">
     <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 22px; margin-bottom: 2px;">Impacto Temporal: Decisões e Sentenças Parciais</h2>
-    
-    <div class="comp-chart-group">
-      <div class="comp-group-title"><span>1. Procedimento Padrão de Controle</span></div>
-      <div class="comp-row">
-        <div class="comp-row-header"><span>Procedimento Base de Mérito</span><span style="color:var(--primary-color);">250 dias (100%)</span></div>
-        <div class="comp-track"><div class="comp-bar" style="width: 37.8%; background: #4a4a4a;">250 dias</div></div>
-      </div>
+    <div style="font-size: 12.5px; color: var(--secondary-color); margin-bottom: 16px;">
+      Impacto em dias corridos comparado ao <strong>Procedimento Base de Mérito (Aba 06 – 250 dias)</strong>.
     </div>
-    
-    <div class="comp-chart-group" style="border-left: 4px solid var(--accent-color);">
-      <div class="comp-group-title"><span>4. Sentença Parcial de Mérito (An Debeatur) + Liquidação Autônoma</span></div>
-      <div class="comp-row">
-        <div class="comp-row-header"><span>Liquidação Autônoma BASE (c/ audiência)</span><span style="color:var(--accent-color);">+250 dias (+100%) | Total: 500d</span></div>
-        <div class="comp-track"><div class="comp-bar" style="width: 37.8%; background: #8b1c31;">+250d</div></div>
+
+    <!-- CATEGORIA 1: PONTO DE PARTIDA -->
+    <div class="comp-chart-group">
+      <div class="comp-group-title">
+        <span>1. Procedimento Padrão de Controle</span>
+        <span style="font-size:11px; font-weight:normal; color:#777;">Base Comparativa CBMA</span>
       </div>
       <div class="comp-row">
-        <div class="comp-row-header"><span>Liquidação com Perito do Tribunal</span><span style="color:var(--accent-color);">+510 dias (+204%) | Total: 760d</span></div>
-        <div class="comp-track"><div class="comp-bar" style="width: 77.3%; background: #6a1525;">+510d</div></div>
+        <div class="comp-row-header">
+          <span>Procedimento Base de Mérito (Aba 06 - Sem incidentes e sem perícia/testemunhas)</span>
+          <span style="color:var(--primary-color);">250 dias (100%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 37.8%; background: #4a4a4a;">250 dias</div>
+        </div>
       </div>
     </div>
 
+    <!-- CATEGORIA 2: BIFURCAÇÃO CLÁSSICA / AD HOC DE MÉRITO -->
+    <div class="comp-chart-group" style="border-left: 4px solid #b25d00;">
+      <div class="comp-group-title">
+        <span>2. Bifurcação Clássica (Sentença Parcial Ad Hoc de Mérito)</span>
+        <span style="font-size:11px; font-weight:bold; color:#b25d00;">Prática Forense sem Calendarização</span>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Ciclo Repetido de Encerramento e Sentença (Aleg. Finais [45d] + Despesas [10d] + Sentença [60d] + Esclarecimentos [15d+15d+30d])</span>
+          <span style="color:#b25d00; font-weight:bold;">+175 dias (+70%) | Total: 425 dias</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 26.5%; background: #b25d00;">+175d</div>
+        </div>
+      </div>
+      <div style="font-size: 11px; color: #666; margin-top: 5px; line-height: 1.4;">
+        * Ocorre quando o tribunal decide cindir uma questão de mérito de forma não planejada: impõe-se a repetição integral da fase deliberativa, atrasando o processo em quase 6 meses antes de qualquer instrução remanescente.
+      </div>
+    </div>
+
+    <!-- CATEGORIA 3: SENTENÇAS PARCIAIS DE JURISDIÇÃO E PREJUDICIAIS -->
+    <div class="comp-chart-group">
+      <div class="comp-group-title">
+        <span>3. Sentença Parcial de Jurisdição e Questões Prejudiciais</span>
+        <span style="font-size:11px; font-weight:normal; color:#8b1c31;">Fases Preliminares Autônomas</span>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Sentença Parcial de Jurisdição / Prejudiciais (s/ audiência - Aba 02)</span>
+          <span style="color:var(--accent-color);">+85 dias (+34%) | Total: 335d</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 12.8%; background: var(--accent-color);">+85d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Sentença Parcial de Jurisdição / Prejudiciais (c/ audiência prévia - Aba 01)</span>
+          <span style="color:var(--accent-color);">+135 dias (+54%) | Total: 385d</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 20.4%; background: var(--accent-color);">+135d</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIA 4: SENTENÇAS PARCIAIS DE MÉRITO (AN DEBEATUR) E LIQUIDAÇÃO AUTÔNOMA -->
+    <div class="comp-chart-group" style="border-left: 4px solid var(--accent-color);">
+      <div class="comp-group-title">
+        <span>4. Sentença Parcial de Mérito (An Debeatur) + Liquidação Autônoma</span>
+        <span style="font-size:11px; font-weight:bold; color:var(--accent-color);">A Decisão Mais Sensível à Eficiência</span>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Liquidação Autônoma MÍNIMA (Aba 34 s/ audiência - Pura postulação documental)</span>
+          <span style="color:var(--accent-color);">+220 dias (+88%) | Total: 470d (Quase duplica a base)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 33.3%; background: #a8233c;">+220d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Liquidação Autônoma BASE (Aba 34 c/ audiência de apresentação)</span>
+          <span style="color:var(--accent-color);">+250 dias (+100%) | Total: 500d (Exatamente duplica)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 37.8%; background: #8b1c31;">+250d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Liquidação com Perito do Tribunal (Aba 37/39 - Honorários, laudo e audiência)</span>
+          <span style="color:var(--accent-color);">+510 dias (+204%) | Total: 760d (Triplica a base)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 77.3%; background: #6a1525;">+510d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Liquidação Autônoma MÁXIMA (Aba 42/45 c/ Exibição de Docs e Audiência)</span>
+          <span style="color:var(--accent-color); font-weight:bold;">+660 dias (+264%) | Total: 910d (Quase quadruplica)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 100%; background: #420a14;">+660 dias adicionais</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORIA 5: INSTRUÇÃO PROBATÓRIA DE MÉRITO (REFERENCIAL) -->
+    <div class="comp-chart-group">
+      <div class="comp-group-title">
+        <span>5. Instrução Probatória e Dinâmica do Mérito (Referencial de Comparação)</span>
+        <span style="font-size:11px; font-weight:normal; color:#555;">Prazos dentro da fase cognitiva</span>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Exibição Incidental de Documentos (Aba 05 - Redfern Schedule / 5 atos)</span>
+          <span style="color:#555;">+100 dias (+40%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 15.1%; background: #78909c;">+100d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Prova Testemunhal Oral CPC (Aba 14 - Rol e inquirição direta em audiência)</span>
+          <span style="color:#555;">+160 dias (+64%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 24.2%; background: #5c6bc0;">+160d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Perícia por Peritos das Partes (Aba 09 - Modelo IBA Rules com laudos iniciais)</span>
+          <span style="color:#2e7d32; font-weight:bold;">+190 dias (+76%) [Economiza 140 dias vs Tribunal]</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 28.8%; background: #2e7d32;">+190d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Prova Testemunhal com Depoimentos Escritos IBA (Aba 11 - Witness Statements)</span>
+          <span style="color:#555;">+200 dias (+80%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 30.3%; background: #3f51b5;">+200d</div>
+        </div>
+      </div>
+      <div class="comp-row">
+        <div class="comp-row-header">
+          <span>Perícia por Perito do Tribunal (Aba 10 - Modelo CPC com 22 atos processuais)</span>
+          <span style="color:#c62828; font-weight:bold;">+330 dias (+132%)</span>
+        </div>
+        <div class="comp-track">
+          <div class="comp-bar" style="width: 50.0%; background: #c62828;">+330d</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegação Inferior -->
     <div style="display: flex; gap: 12px; margin-top: 15px; justify-content: center; flex-wrap: wrap;">
       <button class="btn-avancar btn-outline" style="margin-top:0;" onclick="mudarTela('screen-endo-intro')">Voltar à Visão Geral CBMA</button>
+      <a href="https://calendarios.cbma.com.br/" target="_blank" class="btn-live-cbma">Sistema CBMA ↗</a>
+      <a href="https://iccwbo.org/wp-content/uploads/sites/3/2018/04/icc-model-procedural-timetable-portuguese-1.pdf" target="_blank" class="btn-live-icc">Timetable Modelo CCI / ICC ↗</a>
       <button class="btn-avancar" style="margin-top:0;" onclick="mudarTela('screen-roadmap')">Voltar ao Roadmap</button>
     </div>
   </div>
 </div>
 
-<!-- TELA 8: DASHBOARD DE JURISPRUDÊNCIA (MANTIDO) -->
+<!-- ========================================================
+     DASHBOARD DE JURISPRUDÊNCIA COMPLETO (INDEX.HTML INTEGRAL)
+     ======================================================== -->
 <div id="screen-dashboard" class="screen">
   <div id="left-panel">
     <div class="left-header">
@@ -582,59 +924,145 @@
           <button class="btn-header" onclick="mudarTela('screen-methodology')">Voltar</button>
       </div>
     </div>
+    
     <div class="filters">
       <div class="filters-grid">
-        <div class="filter-group filter-search"><label>Buscar</label><input type="text" id="searchInput" placeholder="Buscar..."></div>
-        <div class="filter-group"><label>Ordem</label><select id="sortCases"><option value="ano_asc">Ano</option></select></div>
-        <div class="filter-group"><label>Tribunal</label><select id="filterTribunal"><option value="">Todos</option></select></div>
-        <div class="filter-group"><label>Finalidade</label><select id="filterFinalidade"><option value="">Qualquer</option></select></div>
-        <div class="filter-group"><label>Grau</label><select id="filterGrau"><option value="">Qualquer</option></select></div>
-        <div class="filter-group"><label>Cumprimento</label><select id="filterCumprimento"><option value="">Todos</option></select></div>
-        <div class="filter-group"><label>Anulada</label><select id="filterAnulada"><option value="">Todas</option></select></div>
+        <div class="filter-group filter-search">
+          <label>Buscar / Palavra-Chave</label>
+          <input type="text" id="searchInput" placeholder="Buscar número, nome, palavra...">
+        </div>
+        <div class="filter-group">
+          <label>Linha do Tempo (Ordem)</label>
+          <select id="sortCases">
+              <option value="ano_asc" selected>Ano (Mais antigos)</option>
+              <option value="ano_desc">Ano (Mais recentes)</option>
+              <option value="alfa_asc">A-Z</option>
+              <option value="alfa_desc">Z-A</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Tribunal</label>
+          <select id="filterTribunal">
+              <option value="">Todos</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Finalidade da Sentença (Col. Y)</label>
+          <select id="filterFinalidade">
+              <option value="">Qualquer Finalidade</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Grau de Importância (Col. X)</label>
+          <select id="filterGrau">
+              <option value="">Qualquer Grau</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Cumprimento de Sentença (Col. L)</label>
+          <select id="filterCumprimento">
+              <option value="">Todos</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Sentença Anulada? (Col. T)</label>
+          <select id="filterAnulada">
+              <option value="">Todas</option>
+          </select>
+        </div>
       </div>
     </div>
+
     <ul class="case-list" id="caseList"></ul>
   </div>
 
   <div id="right-panel">
-    <div id="emptyState" class="empty-state"><span>Selecione um acórdão para visualizar a análise completa.</span></div>
-    <div id="roteiroContainer"><h2 class="roteiro-title" id="roteiroMainTitle">Roteiro</h2><ul class="roteiro-list-lvl0" id="roteiroDynamicList"></ul></div>
+    <!-- ESTADO INICIAL -->
+    <div id="emptyState" class="empty-state">
+      <span>Selecione um acórdão na lista ao lado (Linha do Tempo) para visualizar a análise completa.</span>
+      <span style="display:block; margin-top:20px; font-size:0.9rem; opacity:0.8;">Ou utilize os botões "Roteiro" e "Quantitativos" no menu superior.</span>
+    </div>
+
+    <!-- TELA DE ROTEIRO (Carregada via roteiro.json) -->
+    <div id="roteiroContainer">
+      <h2 class="roteiro-title" id="roteiroMainTitle">Roteiro</h2>
+      <ul class="roteiro-list-lvl0" id="roteiroDynamicList"></ul>
+    </div>
+
+    <!-- TELA DE QUANTITATIVOS -->
     <div id="quantitativosContainer" style="display:none; padding: 35px 40px; overflow-y: auto; height: 100%; background: white;">
       <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 26px; margin-top: 0; margin-bottom: 8px;">Análise Quantitativa</h2>
-      <div class="methodology-grid" style="grid-template-columns: 1fr 1fr; gap: 20px; border:none; background:transparent;">
-        <div class="methodology-col"><h3 style="text-align: center;">Tribunais</h3><div id="chart-tribunais"></div></div>
-        <div class="methodology-col"><h3 style="text-align: center;">Cumprimento de Sentença</h3><div id="chart-cumprimento"></div></div>
-        <div class="methodology-col"><h3 style="text-align: center;">Sentenças Anuladas</h3><div id="chart-anuladas"></div></div>
-        <div class="methodology-col"><h3 style="text-align: center;">Decadência</h3><div id="chart-decadencia"></div></div>
-        <div class="methodology-col" style="grid-column: span 2;"><h3 style="text-align: center;">Funções da Sentença Parcial</h3><div id="chart-funcoes"></div></div>
+      <div style="font-size: 13.5px; color: var(--secondary-color); margin-bottom: 25px;">Distribuição estatística dinâmica dos casos filtrados na base lateral.</div>
+      
+      <div class="methodology-grid" style="grid-template-columns: 1fr 1fr; gap: 20px; border:none; background:transparent; margin-bottom: 20px;">
+        <div class="methodology-col">
+          <h3 style="text-align: center;">Tribunais (STJ vs TJSP)</h3>
+          <div id="chart-tribunais" style="margin-top:15px; display:flex; flex-direction:column; gap:12px;"></div>
+        </div>
+        <div class="methodology-col">
+          <h3 style="text-align: center;">Cumprimento de Sentença (Col. L)</h3>
+          <div id="chart-cumprimento" style="margin-top:15px; display:flex; flex-direction:column; gap:12px;"></div>
+        </div>
+        <div class="methodology-col">
+          <h3 style="text-align: center;">Sentenças Arbitrais Anuladas (Col. T)</h3>
+          <div id="chart-anuladas" style="margin-top:15px; display:flex; flex-direction:column; gap:12px;"></div>
+        </div>
+        <div class="methodology-col">
+          <h3 style="text-align: center;">Tratou da Decadência? (Col. O)</h3>
+          <div id="chart-decadencia" style="margin-top:15px; display:flex; flex-direction:column; gap:12px;"></div>
+        </div>
+        <div class="methodology-col" style="grid-column: span 2;">
+          <h3 style="text-align: center;">Funções da Sentença Parcial (Coluna Y)</h3>
+          <div id="chart-funcoes" style="margin-top:15px; display:grid; grid-template-columns: 1fr 1fr; gap:12px 25px;"></div>
+        </div>
       </div>
     </div>
 
+    <!-- DETALHES COMPLETOS DO CASO -->
     <div id="detailsContainer">
       <div class="detail-header">
           <h2 id="detailNumero">Número do Caso</h2>
           <div class="case-name" id="detailNomeCaso">Nome do Caso</div>
           <div id="tagsContainer"></div>
       </div>
+
       <button class="btn-action" onclick="showPDFView()" id="btnVerIntegra">Acessar Íntegra do Acórdão</button>
-      <div class="section-title">Comentários</div><div class="text-content comments" id="detailComentarios"></div>
+
+      <div class="section-title">Comentários / Observações da Planilha</div>
+      <div class="text-content comments" id="detailComentarios"></div>
+
       <div class="section-title">Dados do Processo</div>
       <div class="info-grid">
           <div class="info-box"><strong>Relator(a)</strong><span id="detailRelator">-</span></div>
           <div class="info-box"><strong>Turma Julgadora</strong><span id="detailTurma">-</span></div>
+          <div class="info-box"><strong>Classe</strong><span id="detailClasse">-</span></div>
+          <div class="info-box"><strong>Tipo da Ação Original</strong><span id="detailTipoAcao">-</span></div>
+          <div class="info-box"><strong>Resultado do Recurso</strong><span id="detailResultado">-</span></div>
+          <div class="info-box"><strong>Sentença Anulada?</strong><span id="detailSentencaAnulada">-</span></div>
       </div>
+
       <div class="section-title">Análise Qualitativa</div>
       <div class="info-grid">
+          <div class="info-box"><strong>Tratou da Decadência?</strong><span id="detailDecadencia">-</span></div>
+          <div class="info-box"><strong>Cumprimento de Sent. Parcial?</strong><span id="detailCumpSentenca">-</span></div>
+          <div class="info-box"><strong>Ação Anulatória?</strong><span id="detailAnulatoria">-</span></div>
+          <div class="info-box"><strong>Anulatória de Sent. Parcial?</strong><span id="detailAnulParcial">-</span></div>
           <div class="info-box"><strong>Grau de Importância</strong><span id="detailGrau">-</span></div>
           <div class="info-box"><strong>Finalidade da Sentença</strong><span id="detailFinalidade">-</span></div>
       </div>
-      <div class="section-title">Ementa Integral</div><div class="text-content" id="detailEmenta"></div>
+
+      <div class="section-title">Ementa Integral</div>
+      <div class="text-content" style="font-family: var(--font-body); font-size: 0.85rem;" id="detailEmenta"></div>
     </div>
     
+    <!-- VISUALIZAÇÃO DO PDF -->
     <div id="pdfContainer">
       <div class="pdf-header">
-          <button class="btn-back" onclick="showDetailsView()">Ver Dados e Comentários</button>
-          <button class="btn-drive" id="btnOpenDrive" onclick="abrirNoDrive()">Abrir no Google Drive ↗</button>
+          <button class="btn-back" onclick="showDetailsView()">Ver Dados e Comentários do Caso</button>
+          <div class="pdf-actions" style="display: flex; align-items: center;">
+              <span style="font-size: 11px; color: #777; margin-right: 10px;">Para inserir comentários no PDF, abra pelo Drive:</span>
+              <button class="btn-drive" id="btnOpenDrive" onclick="abrirNoDrive()">Abrir no Google Drive ↗</button>
+          </div>
       </div>
       <iframe id="pdfFrame" src="" allow="autoplay"></iframe>
     </div>
@@ -649,13 +1077,18 @@
     try {
       const response = await fetch('casos.json');
       casesData = await response.json();
+      
       populateSelect('filterTribunal', 'tribunal');
       populateSelect('filterFinalidade', 'finalidade');
       populateSelectGrau('filterGrau', 'grau_importancia');
       populateSelect('filterCumprimento', 'cump_sentenca');
       populateSelect('filterAnulada', 'sentenca_anulada');
+
       processCases();
-    } catch (error) { console.error('Erro:', error); }
+    } catch (error) {
+      console.error('Erro ao carregar os casos do arquivo JSON:', error);
+      document.getElementById('counter').innerText = 'Erro ao carregar dados';
+    }
   }
 
   async function carregarRoteiro() {
@@ -663,10 +1096,12 @@
       const response = await fetch('roteiro.json');
       const data = await response.json();
       renderizarRoteiro(data);
-    } catch (error) { console.error('Erro:', error); }
+    } catch (error) {
+      console.error('Erro ao carregar roteiro.json:', error);
+      document.getElementById('roteiroDynamicList').innerHTML = '<li style="color:#8b1c31;">Erro ao carregar roteiro.json. Verifique se o arquivo está no repositório.</li>';
+    }
   }
 
-  // === NOVO CARREGAMENTO: BIFURCAÇÃO (TÁTICAS DE GUERRILHA) ===
   async function carregarBifurcacao() {
     try {
       const response = await fetch('bifurcacao.json');
@@ -680,7 +1115,6 @@
           quotesHtml += `<p class="roteiro-quote-p" style="font-size:12.5px; margin-bottom:12px;">${q}</p>`;
         });
 
-        // Alterna cor de destaque se o autor citar a palavra "guerrilla", "tactical" ou "weapon" para dar visual
         const isWarning = JSON.stringify(item.quotes).toLowerCase().match(/guerrilla|weapon|dilatory/);
         const boxClass = isWarning ? 'perspective-box intl' : 'perspective-box';
 
@@ -706,46 +1140,491 @@
     }
   }
 
-  function renderizarRoteiro(data) { /* Código mantido original */ }
-  function toggleRoteiroBox(boxId, hintId) { /* Código mantido original */ }
-  function formatarLinkParaEmbed(url) { /* Código mantido original */ }
-  function mudarTela(idTela) { document.querySelectorAll('.screen').forEach(el => el.classList.remove('active')); document.getElementById(idTela).classList.add('active'); }
-  function handleCardClick(event, cardId) { /* Código mantido original */ }
-  function toggleMainCard(event, cardId) { /* Código mantido original */ }
+  function renderizarRoteiro(data) {
+    if (data.titulo) {
+      document.getElementById('roteiroMainTitle').innerText = data.titulo;
+    }
+    const ul = document.getElementById('roteiroDynamicList');
+    ul.innerHTML = '';
+
+    (data.secoes || []).forEach((sec, idxSec) => {
+      const li = document.createElement('li');
+      li.className = 'roteiro-item-lvl0';
+
+      let html = `<div class="roteiro-heading-lvl0">${sec.titulo}</div>`;
+
+      if (sec.subsecoes && sec.subsecoes.length > 0) {
+        sec.subsecoes.forEach((sub, idxSub) => {
+          const isIntl = sub.subtitulo.toLowerCase().includes('internacional');
+          const subId = `rot-sub-${idxSec}-${idxSub}`;
+
+          html += `
+            <div id="${subId}" class="roteiro-subsecao-box ${isIntl ? 'intl' : ''}">
+              <div class="roteiro-subsecao-header" onclick="toggleRoteiroBox('${subId}', 'hint-${subId}')">
+                <span class="roteiro-subsecao-title">${sub.subtitulo}</span>
+                <span class="perspective-toggle-hint" id="hint-${subId}">Exibir +</span>
+              </div>
+              <div class="roteiro-subsecao-body">
+          `;
+
+          (sub.blocos || []).forEach((bloco, idxBloco) => {
+            const cardId = `rot-card-${idxSec}-${idxSub}-${idxBloco}`;
+            const refHtml = bloco.referencia ? `<span class="roteiro-autor-ref">(${bloco.referencia})</span>` : '';
+
+            html += `
+              <div id="${cardId}" class="roteiro-autor-card">
+                <div class="roteiro-autor-header" onclick="toggleRoteiroBox('${cardId}', 'hint-${cardId}')">
+                  <div>
+                    <span class="roteiro-autor-name">${bloco.autor}</span>
+                    ${refHtml}
+                  </div>
+                  <span class="perspective-toggle-hint" id="hint-${cardId}">Abrir +</span>
+                </div>
+                <div class="roteiro-autor-body">
+            `;
+
+            (bloco.textos || []).forEach(txt => {
+              html += `<p class="roteiro-quote-p">${txt}</p>`;
+            });
+
+            if (bloco.destaque) {
+              html += `<div class="roteiro-destaque-pill">${bloco.destaque}</div>`;
+            }
+
+            html += `
+                </div>
+              </div>
+            `;
+          });
+
+          html += `
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      li.innerHTML = html;
+      ul.appendChild(li);
+    });
+  }
+
+  function toggleRoteiroBox(boxId, hintId) {
+    const box = document.getElementById(boxId);
+    const hint = document.getElementById(hintId);
+    if (!box) return;
+    const isOpen = box.classList.toggle('open');
+    if (hint) {
+      hint.innerText = isOpen ? 'Ocultar −' : 'Exibir +';
+    }
+  }
+
+  function formatarLinkParaEmbed(url) {
+      if (!url || typeof url !== 'string' || url === 'nan') return '';
+      const match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
+      if (match && match[1]) return `https://drive.google.com/file/d/${match[1]}/preview`;
+      const matchId = url.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+      if (matchId && matchId[1]) return `https://drive.google.com/file/d/${matchId[1]}/preview`;
+      return url;
+  }
+
+  function mudarTela(idTela) {
+    document.querySelectorAll('.screen').forEach(el => el.classList.remove('active'));
+    const target = document.getElementById(idTela);
+    if(target) target.classList.add('active');
+  }
+
+  function handleCardClick(event, cardId) {
+    const card = document.getElementById(cardId);
+    if (card && card.classList.contains('collapsed')) {
+      card.classList.remove('collapsed');
+      const badge = document.getElementById('badge-' + cardId);
+      if (badge) badge.innerText = 'Recolher ▴';
+    }
+  }
+
+  function toggleMainCard(event, cardId) {
+    event.stopPropagation();
+    const card = document.getElementById(cardId);
+    const badge = document.getElementById('badge-' + cardId);
+    if (!card) return;
+
+    if (card.classList.contains('collapsed')) {
+      card.classList.remove('collapsed');
+      if (badge) badge.innerText = 'Recolher ▴';
+    } else {
+      card.classList.add('collapsed');
+      if (badge) badge.innerText = 'Clique para abrir ▾';
+    }
+  }
+
   function togglePerspective(event, subId) {
     event.stopPropagation();
     const box = document.getElementById(subId);
     const hint = document.getElementById('hint-' + subId);
     if (!box) return;
-    if (box.classList.contains('open')) { box.classList.remove('open'); if (hint) hint.innerText = 'Exibir +'; } 
-    else { box.classList.add('open'); if (hint) hint.innerText = 'Ocultar −'; }
+
+    if (box.classList.contains('open')) {
+      box.classList.remove('open');
+      if (hint) hint.innerText = 'Exibir +';
+    } else {
+      box.classList.add('open');
+      if (hint) hint.innerText = 'Ocultar −';
+    }
   }
-  function openDocModal(event, modalId) { document.getElementById(modalId).classList.add('active'); }
-  function closeDocModal(event, modalId) { document.getElementById(modalId).classList.remove('active'); }
-  document.addEventListener('keydown', function(e) { if (e.key === 'Escape') document.querySelectorAll('.doc-modal-overlay.active').forEach(m => m.classList.remove('active')); });
 
-  function populateSelect(selectId, field) { /* Código mantido original */ }
-  function populateSelectGrau(selectId, field) { /* Código mantido original */ }
-  function formatGrau(val) { return val; }
+  function openDocModal(event, modalId) {
+    if (event) event.stopPropagation();
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.add('active');
+  }
 
+  function closeDocModal(event, modalId) {
+    if (event) event.stopPropagation();
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.remove('active');
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.doc-modal-overlay.active').forEach(modal => {
+        modal.classList.remove('active');
+      });
+    }
+  });
+
+  function populateSelect(selectId, field) {
+      const select = document.getElementById(selectId);
+      let allValues = [];
+      casesData.forEach(c => {
+          if(c[field]) {
+              let parts = c[field].split(';');
+              parts.forEach(p => allValues.push(p.trim()));
+          }
+      });
+      const values = [...new Set(allValues.filter(v => v !== ''))].sort();
+      values.forEach(v => {
+          const option = document.createElement('option');
+          option.value = v;
+          option.textContent = v;
+          select.appendChild(option);
+      });
+  }
+
+  function populateSelectGrau(selectId, field) {
+      const select = document.getElementById(selectId);
+      let allValues = [];
+      casesData.forEach(c => {
+          if(c[field] && c[field] !== 'nan') {
+              let f = parseFloat(c[field]);
+              if(!isNaN(f)) allValues.push(f);
+          }
+      });
+      const values = [...new Set(allValues)].sort((a,b) => b - a);
+      values.forEach(v => {
+          const option = document.createElement('option');
+          option.value = v.toString();
+          option.textContent = Math.round(v * 100) + '%';
+          select.appendChild(option);
+      });
+  }
+
+  function formatGrau(val) {
+      if(!val || val === '-') return '-';
+      if(val.includes('%')) return val;
+      let num = parseFloat(val);
+      if(!isNaN(num)) return Math.round(num * 100) + '%';
+      return val;
+  }
+
+  const caseListElement = document.getElementById('caseList');
   const searchInput = document.getElementById('searchInput');
-  // Add Events (Simplificados aqui por espaço)
+  const filterTribunal = document.getElementById('filterTribunal');
+  const filterFinalidade = document.getElementById('filterFinalidade');
+  const filterGrau = document.getElementById('filterGrau');
+  const filterCumprimento = document.getElementById('filterCumprimento');
+  const filterAnulada = document.getElementById('filterAnulada');
+  const sortCases = document.getElementById('sortCases');
+  const counter = document.getElementById('counter');
+
+  function renderList(data) {
+      caseListElement.innerHTML = '';
+      counter.innerText = `${data.length} caso(s)`;
+      
+      if(data.length === 0) {
+          caseListElement.innerHTML = '<li style="padding: 20px; color: var(--secondary-color); text-align: center;">Nenhum caso encontrado.</li>';
+          return;
+      }
+
+      data.forEach(item => {
+          const li = document.createElement('li');
+          li.className = 'case-item';
+          if(currentActiveItem && currentActiveItem.id === item.id) {
+              li.classList.add('active');
+          }
+          
+          const nomeExibicao = item.nome_caso ? `<strong>${item.nome_caso}</strong><br>` : '';
+          const importanceTag = (item.grau_importancia && item.grau_importancia !== 'nan') 
+              ? `<span class="tag" style="background:#fcebe1; color:#d9534f; border-color:#d9534f;">Imp: ${formatGrau(item.grau_importancia)}</span>` 
+              : '';
+          
+          li.innerHTML = `
+              <div class="case-title">${nomeExibicao}${item.numero}</div>
+              <div class="case-meta">${item.tribunal} - ${item.turma} | Relator: ${item.relator ? item.relator.split(' ').slice(0,3).join(' ') : ''}...</div>
+              <span class="tag">${item.tribunal}</span>
+              <span class="tag">${item.ano}</span>
+              ${importanceTag}
+              ${item.finalidade ? `<span class="tag" style="background: var(--accent-color); color: white; border:none;">Fin: ${item.finalidade.split(';')[0]}</span>` : ''}
+          `;
+          li.onclick = () => selectCase(item, li);
+          caseListElement.appendChild(li);
+      });
+  }
+
+  function selectCase(item, listItem) {
+      currentActiveItem = item;
+      document.querySelectorAll('.case-item').forEach(el => el.classList.remove('active'));
+      if(listItem) listItem.classList.add('active');
+
+      document.getElementById('emptyState').style.display = 'none';
+      document.getElementById('quantitativosContainer').style.display = 'none';
+      document.getElementById('roteiroContainer').style.display = 'none';
+
+      document.getElementById('detailNumero').innerText = item.numero;
+      const nomeCasoEl = document.getElementById('detailNomeCaso');
+      if(item.nome_caso) {
+          nomeCasoEl.innerText = `"${item.nome_caso}"`;
+          nomeCasoEl.style.display = 'block';
+      } else {
+          nomeCasoEl.style.display = 'none';
+      }
+
+      document.getElementById('tagsContainer').innerHTML = `
+          <span class="tag">${item.tribunal}</span>
+          <span class="tag">${item.ano}</span>
+      `;
+
+      document.getElementById('detailRelator').innerText = item.relator || '-';
+      document.getElementById('detailTurma').innerText = item.turma || '-';
+      document.getElementById('detailClasse').innerText = item.classe || '-';
+      document.getElementById('detailTipoAcao').innerText = item.tipo_acao || '-';
+      document.getElementById('detailResultado').innerText = item.resultado || '-';
+      document.getElementById('detailSentencaAnulada').innerText = item.sentenca_anulada || '-';
+
+      document.getElementById('detailDecadencia').innerText = item.decadencia || '-';
+      document.getElementById('detailCumpSentenca').innerText = item.cump_sentenca || '-';
+      document.getElementById('detailAnulatoria').innerText = item.anulatoria || '-';
+      document.getElementById('detailAnulParcial').innerText = item.anul_parcial || '-';
+      document.getElementById('detailGrau').innerText = formatGrau(item.grau_importancia);
+      document.getElementById('detailFinalidade').innerText = item.finalidade || '-';
+      
+      const commentsEl = document.getElementById('detailComentarios');
+      if(item.comentarios) {
+          commentsEl.innerText = item.comentarios;
+          commentsEl.style.display = 'block';
+          commentsEl.previousElementSibling.style.display = 'block';
+      } else {
+          commentsEl.style.display = 'none';
+          commentsEl.previousElementSibling.style.display = 'none';
+      }
+
+      document.getElementById('detailEmenta').innerText = item.ementa || 'Sem ementa cadastrada.';
+
+      const iframe = document.getElementById('pdfFrame');
+      const btnIntegra = document.getElementById('btnVerIntegra'); 
+      if(item.link && item.link !== 'nan' && item.link.trim() !== '') {
+          iframe.src = formatarLinkParaEmbed(item.link);
+          btnIntegra.style.display = 'inline-flex';
+      } else {
+          iframe.src = '';
+          iframe.srcdoc = '<div style="display:flex;height:100%;align-items:center;justify-content:center;font-family:sans-serif;color:#718096;">Link do documento não disponível na base.</div>';
+          btnIntegra.style.display = 'inline-flex'; 
+      }
+      
+      showPDFView();
+      document.getElementById('detailsContainer').scrollTop = 0;
+  }
+
+  function showPDFView() {
+      document.getElementById('detailsContainer').style.display = 'none';
+      document.getElementById('quantitativosContainer').style.display = 'none';
+      document.getElementById('roteiroContainer').style.display = 'none';
+      document.getElementById('emptyState').style.display = 'none';
+      document.getElementById('pdfContainer').style.display = 'flex';
+  }
+
+  function showDetailsView() {
+      document.getElementById('pdfContainer').style.display = 'none';
+      document.getElementById('quantitativosContainer').style.display = 'none';
+      document.getElementById('roteiroContainer').style.display = 'none';
+      document.getElementById('emptyState').style.display = 'none';
+      document.getElementById('detailsContainer').style.display = 'block';
+  }
+
+  function showQuantitativosView() {
+      document.getElementById('emptyState').style.display = 'none';
+      document.getElementById('detailsContainer').style.display = 'none';
+      document.getElementById('pdfContainer').style.display = 'none';
+      document.getElementById('roteiroContainer').style.display = 'none';
+      document.getElementById('quantitativosContainer').style.display = 'block';
+      document.querySelectorAll('.case-item').forEach(el => el.classList.remove('active'));
+      currentActiveItem = null;
+  }
+
+  function showRoteiroView() {
+      document.getElementById('emptyState').style.display = 'none';
+      document.getElementById('detailsContainer').style.display = 'none';
+      document.getElementById('pdfContainer').style.display = 'none';
+      document.getElementById('quantitativosContainer').style.display = 'none';
+      document.getElementById('roteiroContainer').style.display = 'block';
+      document.querySelectorAll('.case-item').forEach(el => el.classList.remove('active'));
+      currentActiveItem = null;
+  }
+
+  function abrirNoDrive() {
+      if(currentActiveItem && currentActiveItem.drive_url && currentActiveItem.drive_url !== 'nan') {
+          window.open(currentActiveItem.drive_url, '_blank');
+      } else {
+          alert('Link não disponível para este caso.');
+      }
+  }
+
+  function renderQuantidades(data) {
+      let countTrib = { "STJ": 0, "TJSP": 0 };
+      let countCump = { "Sim": 0, "Não": 0 };
+      let countAnul = { "Sim": 0, "Não": 0, "Parcialmente": 0 };
+      let countDecad = { "Sim": 0, "Não": 0 };
+      let countFunc = {};
+
+      data.forEach(c => {
+          if (c.tribunal === "STJ") countTrib["STJ"]++;
+          else if (c.tribunal === "TJSP") countTrib["TJSP"]++;
+
+          let cump = c.cump_sentenca ? c.cump_sentenca.trim().toLowerCase() : "";
+          if (cump === "sim") countCump["Sim"]++;
+          else countCump["Não"]++;
+
+          let anul = c.sentenca_anulada ? c.sentenca_anulada.trim().toLowerCase() : "";
+          if (anul.includes("parcial")) countAnul["Parcialmente"]++;
+          else if (anul.includes("sim")) countAnul["Sim"]++;
+          else if (anul.includes("não") || anul.includes("nao")) countAnul["Não"]++;
+
+          let dec = c.decadencia ? c.decadencia.trim().toLowerCase() : "";
+          if (dec.startsWith("sim")) countDecad["Sim"]++;
+          else countDecad["Não"]++;
+
+          if (c.finalidade && c.finalidade !== 'nan') {
+              let funcs = c.finalidade.split(";");
+              funcs.forEach(f => {
+                  let funcName = f.trim();
+                  if (funcName) {
+                      if (funcName.toLowerCase() === "an debeatur") funcName = "An debeatur";
+                      countFunc[funcName] = (countFunc[funcName] || 0) + 1;
+                  }
+              });
+          }
+      });
+
+      function buildBar(label, count, maxCount) {
+          if (count === 0 && label !== "Sim" && label !== "Não") return '';
+          let pct = maxCount > 0 ? Math.round((count / maxCount) * 100) : 0;
+          return `
+              <div>
+                  <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; color:var(--secondary-color);">
+                      <span>${label}</span>
+                      <span>${count}</span>
+                  </div>
+                  <div style="width:100%; background:#e2dada; border-radius:4px; height:10px; margin-top:4px;">
+                      <div style="width:${pct}%; background:var(--accent-color); height:100%; border-radius:4px;"></div>
+                  </div>
+              </div>
+          `;
+      }
+
+      document.getElementById("chart-tribunais").innerHTML = 
+          buildBar("STJ", countTrib["STJ"], countTrib["STJ"] + countTrib["TJSP"]) + 
+          buildBar("TJSP", countTrib["TJSP"], countTrib["STJ"] + countTrib["TJSP"]);
+
+      document.getElementById("chart-cumprimento").innerHTML = 
+          buildBar("Sim", countCump["Sim"], countCump["Sim"] + countCump["Não"]) + 
+          buildBar("Não", countCump["Não"], countCump["Sim"] + countCump["Não"]);
+
+      document.getElementById("chart-anuladas").innerHTML = 
+          buildBar("Sim", countAnul["Sim"], countAnul["Sim"] + countAnul["Não"] + countAnul["Parcialmente"]) + 
+          buildBar("Não", countAnul["Não"], countAnul["Sim"] + countAnul["Não"] + countAnul["Parcialmente"]) +
+          buildBar("Parcialmente", countAnul["Parcialmente"], countAnul["Sim"] + countAnul["Não"] + countAnul["Parcialmente"]);
+
+      document.getElementById("chart-decadencia").innerHTML = 
+          buildBar("Sim", countDecad["Sim"], countDecad["Sim"] + countDecad["Não"]) + 
+          buildBar("Não", countDecad["Não"], countDecad["Sim"] + countDecad["Não"]);
+
+      let funcHTML = "";
+      let sortedFuncs = Object.entries(countFunc).sort((a, b) => b[1] - a[1]);
+      let maxFunc = sortedFuncs.length > 0 ? sortedFuncs[0][1] : 1;
+      
+      sortedFuncs.forEach(([f, count]) => {
+          funcHTML += buildBar(f, count, maxFunc);
+      });
+      document.getElementById("chart-funcoes").innerHTML = funcHTML || "<div style='font-size:12px;color:#777;text-align:center;'>Nenhuma função catalogada</div>";
+  }
+
+  function processCases() {
+      const term = searchInput.value.toLowerCase();
+      const tribunal = filterTribunal.value;
+      const fin = filterFinalidade.value;
+      const grau = filterGrau.value;
+      const cump = filterCumprimento.value;
+      const anul = filterAnulada.value;
+      const sortMethod = sortCases.value;
+
+      let filtered = casesData.filter(item => {
+          const matchTerm = term === '' || 
+                            item.numero.toLowerCase().includes(term) || 
+                            (item.nome_caso && item.nome_caso.toLowerCase().includes(term)) ||
+                            (item.relator && item.relator.toLowerCase().includes(term)) ||
+                            (item.ementa && item.ementa.toLowerCase().includes(term)) ||
+                            (item.comentarios && item.comentarios.toLowerCase().includes(term));
+          
+          const matchTrib = tribunal === "" || item.tribunal === tribunal;
+          const matchFin = fin === "" || (item.finalidade && item.finalidade.includes(fin)); 
+          const matchGrau = grau === "" || (item.grau_importancia !== "" && parseFloat(item.grau_importancia) === parseFloat(grau));
+          const matchCump = cump === "" || item.cump_sentenca === cump;
+          const matchAnul = anul === "" || item.sentenca_anulada === anul;
+          
+          return matchTerm && matchTrib && matchFin && matchGrau && matchCump && matchAnul;
+      });
+
+      filtered.sort((a, b) => {
+          let anoA = parseInt(a.ano) || 0;
+          let anoB = parseInt(b.ano) || 0;
+          let strA = (a.nome_caso || a.numero).toLowerCase();
+          let strB = (b.nome_caso || b.numero).toLowerCase();
+
+          switch(sortMethod) {
+              case 'ano_desc': return anoB - anoA; 
+              case 'ano_asc': return anoA - anoB; 
+              case 'alfa_asc': return strA.localeCompare(strB); 
+              case 'alfa_desc': return strB.localeCompare(strA); 
+              default: return 0;
+          }
+      });
+
+      renderList(filtered);
+      renderQuantidades(filtered); 
+  }
+
   searchInput.addEventListener('input', processCases);
-  
-  function processCases() { /* Código mantido original */ }
-  function renderList(data) { /* Código mantido original */ }
-  function selectCase(item, listItem) { /* Código mantido original */ }
-  function showPDFView() { /* Código mantido original */ }
-  function showDetailsView() { /* Código mantido original */ }
-  function showQuantitativosView() { /* Código mantido original */ }
-  function showRoteiroView() { /* Código mantido original */ }
-  function abrirNoDrive() { /* Código mantido original */ }
-  function renderQuantidades(data) { /* Código mantido original */ }
+  filterTribunal.addEventListener('change', processCases);
+  filterFinalidade.addEventListener('change', processCases);
+  filterGrau.addEventListener('change', processCases);
+  filterCumprimento.addEventListener('change', processCases);
+  filterAnulada.addEventListener('change', processCases);
+  sortCases.addEventListener('change', processCases);
 
   document.addEventListener('DOMContentLoaded', () => {
     carregarCasos();
     carregarRoteiro();
-    carregarBifurcacao(); // Chamada de injeção dinâmica adicionada aqui
+    carregarBifurcacao();
   });
 </script>
 </body>
