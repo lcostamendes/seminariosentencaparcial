@@ -117,6 +117,32 @@
     color: var(--primary-color); 
   }
 
+  .btn-roadmap-ref {
+    padding: 11px 20px;
+    font-size: 11px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    background: #ffffff;
+    border: 1.5px solid rgba(139, 28, 49, 0.45);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    box-shadow: 0 3px 8px rgba(139, 28, 49, 0.08);
+  }
+  .btn-roadmap-ref:hover {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(139, 28, 49, 0.25);
+  }
+
   .btn-live-cbma { 
     background: linear-gradient(135deg, #1E5839 0%, #2F8557 100%); 
     color: white; 
@@ -268,7 +294,7 @@
   .guerrilha-grid::-webkit-scrollbar { width: 6px; }
   .guerrilha-grid::-webkit-scrollbar-thumb { background: rgba(139, 28, 49, 0.2); border-radius: 3px; }
 
-  /* MODAIS DOUTRINÁRIOS */
+  /* MODAIS DOUTRINÁRIOS E DE REFERÊNCIAS */
   .doc-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(17, 5, 8, 0.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); z-index: 10000; justify-content: center; align-items: center; padding: 25px; box-sizing: border-box; animation: fadeInModal 0.25s ease forwards; }
   .doc-modal-overlay.active { display: flex; }
   @keyframes fadeInModal { from { opacity: 0; } to { opacity: 1; } }
@@ -285,6 +311,11 @@
   .doc-quote-block { background: #fdf9f9; border-left: 4px solid var(--accent-color); padding: 16px 20px; border-radius: 0 6px 6px 0; margin-bottom: 18px; }
   .doc-quote-block:last-child { margin-bottom: 0; }
   .doc-quote-title { font-family: var(--font-heading); font-weight: 700; font-size: 15px; color: var(--primary-color); margin-bottom: 8px; display: block; }
+
+  /* LISTAS DE REFERÊNCIAS E JURISPRUDÊNCIA */
+  .ref-list-container { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 9px; }
+  .ref-item-box { background: #fdfbfb; border: 1px solid var(--border-color); border-left: 3px solid var(--accent-color); padding: 11px 15px; border-radius: 5px; font-size: 12.5px; line-height: 1.55; color: #2b2b2b; transition: all 0.2s ease; }
+  .ref-item-box:hover { background: #ffffff; border-color: var(--accent-color); box-shadow: 0 3px 8px rgba(139, 28, 49, 0.08); }
 
   /* METODOLOGIA EXOPROCESSUAL */
   .totalizer-badge { background: var(--accent-color); color: white; padding: 8px 20px; border-radius: 30px; font-size: 16px; font-family: var(--font-heading); font-weight: 600; margin-bottom: 20px; letter-spacing: 1px; display: inline-block; box-shadow: 0 4px 10px rgba(139, 28, 49, 0.2); }
@@ -342,7 +373,7 @@
   .empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: var(--secondary-color); font-size: 1.1rem; text-align: center; padding: 20px; font-family: var(--font-heading); }
 
   #roteiroContainer { display: none; padding: 35px 50px; overflow-y: auto; height: 100%; background: white; text-align: left; box-sizing: border-box; }
-  .roteiro-title { font-family: var(--font-heading); color: var(--primary-color); font-size: 28px; margin-top: 0; margin-bottom: 22px; padding-bottom: 12px; border-bottom: 2px solid var(--accent-color); }
+  .roteiro-title { font-family: var(--font-heading); font-size: 28px; margin-top: 0; margin-bottom: 22px; padding-bottom: 12px; border-bottom: 2px solid var(--accent-color); }
   .roteiro-list-lvl0 { list-style: none; padding-left: 0; margin: 0; }
   .roteiro-item-lvl0 { margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px solid var(--border-color); }
   .roteiro-item-lvl0:last-child { border-bottom: none; }
@@ -443,8 +474,10 @@
         </ul>
       </div>
     </div>
-    <div style="display: flex; gap: 15px; margin-top: 25px;">
+    <div style="display: flex; gap: 12px; margin-top: 25px; flex-wrap: wrap; justify-content: center; align-items: center;">
       <button class="btn-avancar btn-outline" style="margin-top:0;" onclick="mudarTela('screen-intro')">Voltar à Capa</button>
+      <button type="button" class="btn-roadmap-ref" onclick="openDocModal(event, 'modal-bibliografia')">📚 Referência bibliográfica</button>
+      <button type="button" class="btn-roadmap-ref" onclick="openDocModal(event, 'modal-jurisprudencia')">⚖️ Jurisprudência</button>
       <button class="btn-avancar" style="margin-top:0;" onclick="mudarTela('screen-funcoes')">Introdução</button>
     </div>
   </div>
@@ -530,7 +563,9 @@
   </div>
 </div>
 
-<!-- MODAIS DA INTRODUÇÃO (TEXTOS COMPLETOS) -->
+<!-- ========================================================
+     MODAIS DA INTRODUÇÃO E DE REFERÊNCIAS
+     ======================================================== -->
 <div id="modal-larb-cpc" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-larb-cpc')">
   <div class="doc-modal-card" onclick="event.stopPropagation()">
     <div class="doc-modal-header">
@@ -632,6 +667,48 @@
   </div>
 </div>
 
+<!-- MODAL: REFERÊNCIA BIBLIOGRÁFICA (Carregado via referencias.json) -->
+<div id="modal-bibliografia" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-bibliografia')">
+  <div class="doc-modal-card" onclick="event.stopPropagation()">
+    <div class="doc-modal-header">
+      <div>
+        <h3>Referência Bibliográfica</h3>
+        <div class="doc-modal-subtitle">Doutrina e Artigos Acadêmicos Citados</div>
+      </div>
+      <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-bibliografia')">✕ Fechar</button>
+    </div>
+    <div class="doc-modal-body">
+      <div style="margin-bottom: 14px;">
+        <input type="text" placeholder="Filtrar bibliografia por autor, título, ano..." oninput="filtrarLista('modal-bibliografia-body', this.value)" style="width:100%; padding:8px 12px; border:1px solid var(--border-color); border-radius:4px; font-size:12.5px; box-sizing:border-box; font-family:var(--font-body);">
+      </div>
+      <div id="modal-bibliografia-body">
+        <div style="color:var(--secondary-color); font-style:italic;">Carregando referências bibliográficas...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: JURISPRUDÊNCIA (Carregado via referencias.json) -->
+<div id="modal-jurisprudencia" class="doc-modal-overlay" onclick="closeDocModal(event, 'modal-jurisprudencia')">
+  <div class="doc-modal-card" onclick="event.stopPropagation()">
+    <div class="doc-modal-header">
+      <div>
+        <h3>Jurisprudência</h3>
+        <div class="doc-modal-subtitle">Precedentes Judiciais Citados (TJSP e STJ)</div>
+      </div>
+      <button type="button" class="doc-modal-close" onclick="closeDocModal(event, 'modal-jurisprudencia')">✕ Fechar</button>
+    </div>
+    <div class="doc-modal-body">
+      <div style="margin-bottom: 14px;">
+        <input type="text" placeholder="Filtrar acórdãos por número, tribunal, relator..." oninput="filtrarLista('modal-jurisprudencia-body', this.value)" style="width:100%; padding:8px 12px; border:1px solid var(--border-color); border-radius:4px; font-size:12.5px; box-sizing:border-box; font-family:var(--font-body);">
+      </div>
+      <div id="modal-jurisprudencia-body">
+        <div style="color:var(--secondary-color); font-style:italic;">Carregando jurisprudência...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- TELA 4: PESQUISA JURISPRUDENCIAL -->
 <div id="screen-methodology" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 900px; padding: 35px 50px;">
@@ -666,9 +743,7 @@
   </div>
 </div>
 
-<!-- ========================================================
-     TELA 5: O RISCO DA BIFURCAÇÃO COMO TÁTICA DE GUERRILHA
-     ======================================================== -->
+<!-- TELA 5: TÁTICAS DE GUERRILHA -->
 <div id="screen-guerrilha" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 1050px; padding: 35px 50px;">
     <div style="font-size: 11px; font-weight: 700; color: var(--accent-color); letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 4px;">
@@ -693,9 +768,7 @@
   </div>
 </div>
 
-<!-- ========================================================
-     PARTE 1 DO CBMA: PREMISSAS E VISÃO GERAL
-     ======================================================== -->
+<!-- PARTE 1 DO CBMA: PREMISSAS E VISÃO GERAL -->
 <div id="screen-endo-intro" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 900px; padding: 35px 50px;">
     <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 24px; margin-bottom: 5px;">II. Efeitos Endoprocessuais</h2>
@@ -747,9 +820,7 @@
   </div>
 </div>
 
-<!-- ========================================================
-     PARTE 2 DO CBMA: IMPACTO TEMPORAL E QUANTIDADE DE DIAS DE CADA INCIDENTE
-     ======================================================== -->
+<!-- PARTE 2 DO CBMA: IMPACTO TEMPORAL -->
 <div id="screen-endo-comparativo" class="screen dark-bg">
   <div class="glass-panel" style="max-width: 950px; padding: 25px 40px;">
     <h2 style="font-family: var(--font-heading); color: var(--primary-color); font-size: 22px; margin-bottom: 2px;">Impacto Temporal: Decisões e Sentenças Parciais</h2>
@@ -774,7 +845,7 @@
       </div>
     </div>
 
-    <!-- CATEGORIA 2: BIFURCAÇÃO CLÁSSICA / AD HOC DE MÉRITO -->
+    <!-- CATEGORIA 2: BIFURCAÇÃO CLÁSSICA -->
     <div class="comp-chart-group" style="border-left: 4px solid #b25d00;">
       <div class="comp-group-title">
         <span>2. Bifurcação Clássica (Sentença Parcial Ad Hoc de Mérito)</span>
@@ -794,7 +865,7 @@
       </div>
     </div>
 
-    <!-- CATEGORIA 3: SENTENÇAS PARCIAIS DE JURISDIÇÃO E PREJUDICIAIS -->
+    <!-- CATEGORIA 3: SENTENÇAS PARCIAIS DE JURISDIÇÃO -->
     <div class="comp-chart-group">
       <div class="comp-group-title">
         <span>3. Sentença Parcial de Jurisdição e Questões Prejudiciais</span>
@@ -820,7 +891,7 @@
       </div>
     </div>
 
-    <!-- CATEGORIA 4: SENTENÇAS PARCIAIS DE MÉRITO (AN DEBEATUR) E LIQUIDAÇÃO AUTÔNOMA -->
+    <!-- CATEGORIA 4: AN DEBEATUR E LIQUIDAÇÃO AUTÔNOMA -->
     <div class="comp-chart-group" style="border-left: 4px solid var(--accent-color);">
       <div class="comp-group-title">
         <span>4. Sentença Parcial de Mérito (An Debeatur) + Liquidação Autônoma</span>
@@ -864,7 +935,7 @@
       </div>
     </div>
 
-    <!-- CATEGORIA 5: INSTRUÇÃO PROBATÓRIA DE MÉRITO (REFERENCIAL) -->
+    <!-- CATEGORIA 5: INSTRUÇÃO PROBATÓRIA DE MÉRITO -->
     <div class="comp-chart-group">
       <div class="comp-group-title">
         <span>5. Instrução Probatória e Dinâmica do Mérito (Referencial de Comparação)</span>
@@ -927,9 +998,7 @@
   </div>
 </div>
 
-<!-- ========================================================
-     DASHBOARD DE JURISPRUDÊNCIA COMPLETO
-     ======================================================== -->
+<!-- DASHBOARD DE JURISPRUDÊNCIA COMPLETO -->
 <div id="screen-dashboard" class="screen">
   <div id="left-panel">
     <div class="left-header">
@@ -999,7 +1068,7 @@
       <span style="display:block; margin-top:20px; font-size:0.9rem; opacity:0.8;">Ou utilize os botões "Roteiro" e "Quantitativos" no menu superior.</span>
     </div>
 
-    <!-- TELA DE ROTEIRO (Carregada via roteiro.json) -->
+    <!-- TELA DE ROTEIRO -->
     <div id="roteiroContainer">
       <h2 class="roteiro-title" id="roteiroMainTitle">Roteiro</h2>
       <ul class="roteiro-list-lvl0" id="roteiroDynamicList"></ul>
@@ -1088,6 +1157,7 @@
 <script>
   let casesData = [];
   let currentActiveItem = null;
+  let referenciasData = null;
 
   async function carregarCasos() {
     try {
@@ -1154,6 +1224,85 @@
       console.error('Erro ao carregar bifurcacao.json:', error);
       document.getElementById('guerrilhaContainer').innerHTML = '<div style="color:var(--accent-color);">Erro ao carregar bifurcacao.json. Certifique-se de que o arquivo foi criado.</div>';
     }
+  }
+
+  async function carregarReferencias() {
+    try {
+      const response = await fetch('referencias.json');
+      referenciasData = await response.json();
+      renderizarReferencias();
+    } catch (error) {
+      console.error('Erro ao carregar referencias.json:', error);
+      const bibContainer = document.getElementById('modal-bibliografia-body');
+      const jurContainer = document.getElementById('modal-jurisprudencia-body');
+      if (bibContainer) bibContainer.innerHTML = '<div style="color:var(--accent-color);">Erro ao carregar referencias.json. Certifique-se de que o arquivo está no servidor.</div>';
+      if (jurContainer) jurContainer.innerHTML = '<div style="color:var(--accent-color);">Erro ao carregar referencias.json. Certifique-se de que o arquivo está no servidor.</div>';
+    }
+  }
+
+  function renderizarReferencias() {
+    if (!referenciasData) return;
+
+    // 1. Bibliografia
+    const bibBody = document.getElementById('modal-bibliografia-body');
+    if (bibBody && referenciasData.bibliografia) {
+      let html = `<div style="font-size:12px; color:var(--secondary-color); margin-bottom:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px;">Total catalogado: ${referenciasData.bibliografia.length} obras e artigos</div>`;
+      html += '<ul class="ref-list-container">';
+      referenciasData.bibliografia.forEach((item, idx) => {
+        html += `<li class="ref-item-box"><strong style="color:var(--accent-color); margin-right:6px;">[${idx + 1}]</strong>${item}</li>`;
+      });
+      html += '</ul>';
+      bibBody.innerHTML = html;
+    }
+
+    // 2. Jurisprudência
+    const jurBody = document.getElementById('modal-jurisprudencia-body');
+    if (jurBody && referenciasData.jurisprudencia) {
+      let tjspList = [];
+      let stjList = [];
+
+      referenciasData.jurisprudencia.forEach(j => {
+        if (j.includes('Superior Tribunal de Justiça') || j.startsWith('BRASIL')) {
+          stjList.push(j);
+        } else {
+          tjspList.push(j);
+        }
+      });
+
+      const total = tjspList.length + stjList.length;
+      let html = `<div style="font-size:12px; color:var(--secondary-color); margin-bottom:15px; font-weight:600; text-transform:uppercase; letter-spacing:0.8px;">Total catalogado: ${total} julgados (${tjspList.length} TJSP | ${stjList.length} STJ)</div>`;
+
+      if (tjspList.length > 0) {
+        html += `<div style="font-family:var(--font-heading); font-size:16px; color:var(--primary-color); font-weight:700; margin:14px 0 10px 0; padding-bottom:4px; border-bottom:2px solid var(--accent-color);">Tribunal de Justiça de São Paulo (TJSP) - ${tjspList.length} decisões</div>`;
+        html += '<ul class="ref-list-container">';
+        tjspList.forEach((item, idx) => {
+          html += `<li class="ref-item-box"><strong style="color:var(--accent-color); margin-right:6px;">[${idx + 1}]</strong>${item}</li>`;
+        });
+        html += '</ul>';
+      }
+
+      if (stjList.length > 0) {
+        html += `<div style="font-family:var(--font-heading); font-size:16px; color:var(--primary-color); font-weight:700; margin:22px 0 10px 0; padding-bottom:4px; border-bottom:2px solid var(--accent-color);">Superior Tribunal de Justiça (STJ) - ${stjList.length} decisões</div>`;
+        html += '<ul class="ref-list-container">';
+        stjList.forEach((item, idx) => {
+          html += `<li class="ref-item-box"><strong style="color:var(--accent-color); margin-right:6px;">[${idx + 1}]</strong>${item}</li>`;
+        });
+        html += '</ul>';
+      }
+
+      jurBody.innerHTML = html;
+    }
+  }
+
+  function filtrarLista(containerId, termo) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    const items = container.querySelectorAll('.ref-item-box');
+    const t = termo.toLowerCase().trim();
+    items.forEach(el => {
+      const text = el.innerText.toLowerCase();
+      el.style.display = text.includes(t) ? 'block' : 'none';
+    });
   }
 
   function renderizarRoteiro(data) {
@@ -1641,6 +1790,7 @@
     carregarCasos();
     carregarRoteiro();
     carregarBifurcacao();
+    carregarReferencias();
   });
 </script>
 </body>
